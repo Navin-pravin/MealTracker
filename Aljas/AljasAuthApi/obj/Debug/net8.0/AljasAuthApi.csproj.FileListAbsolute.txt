@@ -1,0 +1,545 @@
+/home/aljas/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.csproj.AssemblyReference.cache
+/home/aljas/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.GeneratedMSBuildEditorConfig.editorconfig
+/home/aljas/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.AssemblyInfoInputs.cache
+/home/aljas/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.AssemblyInfo.cs
+/home/aljas/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.csproj.CoreCompileInputs.cache
+/home/aljas/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.MvcApplicationPartsAssemblyInfo.cs
+/home/aljas/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.MvcApplicationPartsAssemblyInfo.cache
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/appsettings.Development.json
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/appsettings.json
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.deps.json
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.runtimeconfig.json
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.pdb
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/BouncyCastle.Cryptography.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/DnsClient.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/EPPlus.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/EPPlus.Interfaces.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/EPPlus.System.Drawing.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/MailKit.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Bcl.Cryptography.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Bcl.Memory.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Json.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Physical.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.FileSystemGlobbing.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Primitives.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Win32.SystemEvents.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/MimeKit.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/MongoDB.Bson.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/MongoDB.Driver.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/SharpCompress.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Snappier.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Drawing.Common.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Formats.Asn1.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/System.IO.Pipelines.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Security.Cryptography.Pkcs.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Text.Encoding.CodePages.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Text.Encodings.Web.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Text.Json.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/ZstdSharp.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.dll
+/home/aljas/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll
+/home/aljas/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets.build.json
+/home/aljas/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets.development.json
+/home/aljas/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.AljasAuthApi.Microsoft.AspNetCore.StaticWebAssets.props
+/home/aljas/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.build.AljasAuthApi.props
+/home/aljas/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.AljasAuthApi.props
+/home/aljas/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.AljasAuthApi.props
+/home/aljas/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets.pack.json
+/home/aljas/Aljas/AljasAuthApi/obj/Debug/net8.0/scopedcss/bundle/AljasAuthApi.styles.css
+/home/aljas/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.csproj.CopyComplete
+/home/aljas/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.dll
+/home/aljas/Aljas/AljasAuthApi/obj/Debug/net8.0/refint/AljasAuthApi.dll
+/home/aljas/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.pdb
+/home/aljas/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.genruntimeconfig.cache
+/home/aljas/Aljas/AljasAuthApi/obj/Debug/net8.0/ref/AljasAuthApi.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/appsettings.Development.json
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/appsettings.json
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.deps.json
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.runtimeconfig.json
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.pdb
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/BouncyCastle.Cryptography.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/DnsClient.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/EPPlus.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/EPPlus.Interfaces.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/EPPlus.System.Drawing.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/MailKit.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Bcl.Cryptography.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Bcl.Memory.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Json.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Physical.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.FileSystemGlobbing.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Primitives.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Win32.SystemEvents.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/MimeKit.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/MongoDB.Bson.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/MongoDB.Driver.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/SharpCompress.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Snappier.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Drawing.Common.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Formats.Asn1.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.IO.Pipelines.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Security.Cryptography.Pkcs.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Text.Encoding.CodePages.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Text.Encodings.Web.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Text.Json.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/ZstdSharp.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.csproj.AssemblyReference.cache
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.GeneratedMSBuildEditorConfig.editorconfig
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.AssemblyInfoInputs.cache
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.AssemblyInfo.cs
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.csproj.CoreCompileInputs.cache
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.MvcApplicationPartsAssemblyInfo.cs
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.MvcApplicationPartsAssemblyInfo.cache
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets.build.json
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets.development.json
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.AljasAuthApi.Microsoft.AspNetCore.StaticWebAssets.props
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.build.AljasAuthApi.props
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.AljasAuthApi.props
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.AljasAuthApi.props
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets.pack.json
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/scopedcss/bundle/AljasAuthApi.styles.css
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.csproj.CopyComplete
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/refint/AljasAuthApi.dll
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.pdb
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.genruntimeconfig.cache
+/home/piq2/Downloads/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/ref/AljasAuthApi.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.csproj.AssemblyReference.cache
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.GeneratedMSBuildEditorConfig.editorconfig
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.AssemblyInfoInputs.cache
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.AssemblyInfo.cs
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.csproj.CoreCompileInputs.cache
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.MvcApplicationPartsAssemblyInfo.cs
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.MvcApplicationPartsAssemblyInfo.cache
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/refint/AljasAuthApi.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.pdb
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/appsettings.Development.json
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/appsettings.json
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.deps.json
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.runtimeconfig.json
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.pdb
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/BouncyCastle.Cryptography.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/DnsClient.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/EPPlus.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/EPPlus.Interfaces.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/EPPlus.System.Drawing.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/MailKit.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Bcl.Cryptography.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Bcl.Memory.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Json.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Physical.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.FileSystemGlobbing.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Primitives.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Win32.SystemEvents.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/MimeKit.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/MongoDB.Bson.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/MongoDB.Driver.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/SharpCompress.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Snappier.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Drawing.Common.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Formats.Asn1.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.IO.Pipelines.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Security.Cryptography.Pkcs.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Text.Encoding.CodePages.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Text.Encodings.Web.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Text.Json.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/ZstdSharp.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets.build.json
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets.development.json
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.AljasAuthApi.Microsoft.AspNetCore.StaticWebAssets.props
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.build.AljasAuthApi.props
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.AljasAuthApi.props
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.AljasAuthApi.props
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets.pack.json
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/scopedcss/bundle/AljasAuthApi.styles.css
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.csproj.CopyComplete
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.genruntimeconfig.cache
+/home/aljas/Downloads/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/ref/AljasAuthApi.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/appsettings.Development.json
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/appsettings.json
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.deps.json
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.runtimeconfig.json
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.pdb
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/BouncyCastle.Cryptography.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/DnsClient.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/EPPlus.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/EPPlus.Interfaces.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/EPPlus.System.Drawing.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/MailKit.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Bcl.Cryptography.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Bcl.Memory.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Json.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Physical.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.FileSystemGlobbing.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Primitives.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Win32.SystemEvents.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/MimeKit.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/MongoDB.Bson.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/MongoDB.Driver.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/SharpCompress.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Snappier.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Drawing.Common.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Formats.Asn1.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.IO.Pipelines.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Security.Cryptography.Pkcs.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Text.Encoding.CodePages.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Text.Encodings.Web.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Text.Json.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/ZstdSharp.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.csproj.AssemblyReference.cache
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.GeneratedMSBuildEditorConfig.editorconfig
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.AssemblyInfoInputs.cache
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.AssemblyInfo.cs
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.csproj.CoreCompileInputs.cache
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.MvcApplicationPartsAssemblyInfo.cs
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.MvcApplicationPartsAssemblyInfo.cache
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets.build.json
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets.development.json
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.AljasAuthApi.Microsoft.AspNetCore.StaticWebAssets.props
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.build.AljasAuthApi.props
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.AljasAuthApi.props
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.AljasAuthApi.props
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets.pack.json
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/scopedcss/bundle/AljasAuthApi.styles.css
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.csproj.CopyComplete
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/refint/AljasAuthApi.dll
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.pdb
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.genruntimeconfig.cache
+/home/aljas/Downloads/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/ref/AljasAuthApi.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.csproj.AssemblyReference.cache
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.GeneratedMSBuildEditorConfig.editorconfig
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.AssemblyInfoInputs.cache
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.AssemblyInfo.cs
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.csproj.CoreCompileInputs.cache
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.MvcApplicationPartsAssemblyInfo.cs
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.MvcApplicationPartsAssemblyInfo.cache
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/refint/AljasAuthApi.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.pdb
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/appsettings.Development.json
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/appsettings.json
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.deps.json
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.runtimeconfig.json
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.pdb
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/BouncyCastle.Cryptography.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/DnsClient.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/EPPlus.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/EPPlus.Interfaces.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/EPPlus.System.Drawing.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/MailKit.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Bcl.Cryptography.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Bcl.Memory.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Json.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Physical.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.FileSystemGlobbing.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Primitives.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Win32.SystemEvents.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/MimeKit.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/MongoDB.Bson.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/MongoDB.Driver.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Newtonsoft.Json.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Pipelines.Sockets.Unofficial.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/SharpCompress.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Snappier.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/StackExchange.Redis.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Drawing.Common.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Formats.Asn1.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.IO.Pipelines.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Security.Cryptography.Pkcs.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Text.Encoding.CodePages.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Text.Encodings.Web.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Text.Json.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/ZstdSharp.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets.build.json
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets.development.json
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.AljasAuthApi.Microsoft.AspNetCore.StaticWebAssets.props
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.build.AljasAuthApi.props
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.AljasAuthApi.props
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.AljasAuthApi.props
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets.pack.json
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/scopedcss/bundle/AljasAuthApi.styles.css
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.csproj.CopyComplete
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.genruntimeconfig.cache
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Aljas/AljasAuthApi/obj/Debug/net8.0/ref/AljasAuthApi.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.csproj.AssemblyReference.cache
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.GeneratedMSBuildEditorConfig.editorconfig
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.AssemblyInfoInputs.cache
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.AssemblyInfo.cs
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.csproj.CoreCompileInputs.cache
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.MvcApplicationPartsAssemblyInfo.cs
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.MvcApplicationPartsAssemblyInfo.cache
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.sourcelink.json
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/appsettings.Development.json
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/appsettings.json
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.deps.json
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.runtimeconfig.json
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.pdb
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/BouncyCastle.Cryptography.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/DnsClient.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/EPPlus.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/EPPlus.Interfaces.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/EPPlus.System.Drawing.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/MailKit.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Bcl.Cryptography.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Bcl.Memory.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Json.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Physical.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.FileSystemGlobbing.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Primitives.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Win32.SystemEvents.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/MimeKit.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/MongoDB.Bson.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/MongoDB.Driver.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Newtonsoft.Json.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Pipelines.Sockets.Unofficial.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/RabbitMQ.Client.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/SharpCompress.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Snappier.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/StackExchange.Redis.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Drawing.Common.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Formats.Asn1.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/System.IO.Pipelines.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Security.Cryptography.Pkcs.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Text.Encoding.CodePages.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Text.Encodings.Web.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Text.Json.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/ZstdSharp.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets.build.json
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets.development.json
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.AljasAuthApi.Microsoft.AspNetCore.StaticWebAssets.props
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.build.AljasAuthApi.props
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.AljasAuthApi.props
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.AljasAuthApi.props
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets.pack.json
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/obj/Debug/net8.0/scopedcss/bundle/AljasAuthApi.styles.css
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.csproj.CopyComplete
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/obj/Debug/net8.0/refint/AljasAuthApi.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.pdb
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.genruntimeconfig.cache
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas/AljasAuthApi/obj/Debug/net8.0/ref/AljasAuthApi.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.csproj.AssemblyReference.cache
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.GeneratedMSBuildEditorConfig.editorconfig
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.AssemblyInfoInputs.cache
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.AssemblyInfo.cs
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.csproj.CoreCompileInputs.cache
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.MvcApplicationPartsAssemblyInfo.cs
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.MvcApplicationPartsAssemblyInfo.cache
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.sourcelink.json
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/obj/Debug/net8.0/refint/AljasAuthApi.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.pdb
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/appsettings.Development.json
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/appsettings.json
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.deps.json
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.runtimeconfig.json
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/AljasAuthApi.pdb
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/BouncyCastle.Cryptography.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/DnsClient.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/EPPlus.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/EPPlus.Interfaces.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/EPPlus.System.Drawing.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/MailKit.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Bcl.Cryptography.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Bcl.Memory.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Json.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.FileProviders.Physical.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.FileSystemGlobbing.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Extensions.Primitives.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Microsoft.Win32.SystemEvents.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/MimeKit.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/MongoDB.Bson.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/MongoDB.Driver.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Newtonsoft.Json.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Pipelines.Sockets.Unofficial.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/RabbitMQ.Client.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/SharpCompress.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Snappier.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/StackExchange.Redis.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Drawing.Common.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Formats.Asn1.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/System.IO.Pipelines.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Security.Cryptography.Pkcs.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Text.Encoding.CodePages.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Text.Encodings.Web.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/System.Text.Json.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/ZstdSharp.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/bin/Debug/net8.0/runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets.build.json
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets.development.json
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.AljasAuthApi.Microsoft.AspNetCore.StaticWebAssets.props
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.build.AljasAuthApi.props
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.AljasAuthApi.props
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.AljasAuthApi.props
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/obj/Debug/net8.0/staticwebassets.pack.json
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/obj/Debug/net8.0/scopedcss/bundle/AljasAuthApi.styles.css
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.csproj.CopyComplete
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/obj/Debug/net8.0/AljasAuthApi.genruntimeconfig.cache
+/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/obj/Debug/net8.0/ref/AljasAuthApi.dll
