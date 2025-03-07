@@ -30,5 +30,9 @@ namespace AljasAuthApi.Models
 
         public string? OTP { get; set; }
         public DateTime? OTPGeneratedAt { get; set; }
-    }
+
+    [BsonElement("CreatedAt")]
+public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+}
 }

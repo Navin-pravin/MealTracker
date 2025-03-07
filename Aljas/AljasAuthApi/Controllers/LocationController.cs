@@ -18,7 +18,7 @@ namespace ProjectHierarchyApi.Controllers
         }
 
         // ✅ Get all locations for a given project
-        [HttpGet("project/{project}")]
+        [HttpGet("project/{projectId}")]
         public async Task<ActionResult<List<Location>>> GetLocationsByProject(string projectId)
         {
             var locations = await _locationService.GetLocationsByProjectIdAsync(projectId);

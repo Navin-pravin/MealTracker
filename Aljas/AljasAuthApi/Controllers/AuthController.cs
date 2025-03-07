@@ -38,5 +38,14 @@ namespace AljasAuthApi.Controllers
 
             return Ok(new { message = "Successful Login", token = result });
         }
+        [HttpPost("resend-otp")]
+public async Task<IActionResult> ResendOTP([FromBody] ResendOTPRequest request)
+{
+    var isSent = await _authService.ResendOTP(request);
+    if (!isSent) return NotFound(new { message = "User not found or OTP resend failed." });
+
+    return Ok(new { message = "OTP resent successfully" });
+}
+
     }
 }

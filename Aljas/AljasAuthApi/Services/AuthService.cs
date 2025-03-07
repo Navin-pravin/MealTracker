@@ -56,5 +56,22 @@ namespace AljasAuthApi.Services
             // ✅ Generate JWT token on successful login
             return _tokenService.GenerateJwtToken(user.Email);
         }
+        public async Task<bool> ResendOTP(ResendOTPRequest request)
+{
+    var user = await _users.Find(u => u.Email == request.Email).FirstOrDefaultAsync();
+    if (user == null) return false;
+
+    var otp = new Random().Next(1000, 9999).ToString();
+    await _emailService.SendOtpAsync(user.Email, otp);
+
+    var update = Builders<User>.Update
+        .Set(u => u.OTP, otp)
+        .Set(u => u.OTPGeneratedAt, DateTime.UtcNow);
+        
+    await _users.UpdateOneAsync(u => u.Id == user.Id, update);
+
+    return true;
+}
+
     }
 }

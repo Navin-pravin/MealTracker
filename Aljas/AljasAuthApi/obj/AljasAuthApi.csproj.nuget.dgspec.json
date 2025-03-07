@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/AljasAuthApi.csproj": {}
+    "/home/piq2/Downloads/GitHub/MealTracker/Aljas/AljasAuthApi/AljasAuthApi.csproj": {}
   },
   "projects": {
-    "/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/AljasAuthApi.csproj": {
+    "/home/piq2/Downloads/GitHub/MealTracker/Aljas/AljasAuthApi/AljasAuthApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/AljasAuthApi.csproj",
+        "projectUniqueName": "/home/piq2/Downloads/GitHub/MealTracker/Aljas/AljasAuthApi/AljasAuthApi.csproj",
         "projectName": "AljasAuthApi",
-        "projectPath": "/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/AljasAuthApi.csproj",
+        "projectPath": "/home/piq2/Downloads/GitHub/MealTracker/Aljas/AljasAuthApi/AljasAuthApi.csproj",
         "packagesPath": "/home/piq2/.nuget/packages/",
-        "outputPath": "/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/obj/",
+        "outputPath": "/home/piq2/Downloads/GitHub/MealTracker/Aljas/AljasAuthApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/piq2/.nuget/NuGet/NuGet.Config"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9uHU+o/KL0dv52k0QJEZ+0l/0TVSxo22imi4qImhk/NUDmsINomFxmGtbfyBl0QSqxkIONgkIiegnQszDCNIxw==",
+  "dgSpecHash": "v067vZSa9v0lzqs2xZ5xZBFFHSd2i0CkxH3bA1wzBGK9jCqOGcOAz5wXcaB0Qj8AArmaKmEkk6CZxU80oR42Rw==",
   "success": true,
-  "projectFilePath": "/home/piq2/Downloads/Aljasapiusermanage (updated)/Aljasapiusermanage (1)/Aljasapiupdate (1)/Aljasapi/Meals-Tracker-Piq/Aljas(rabbitmq) (2)/Aljas/AljasAuthApi/AljasAuthApi.csproj",
+  "projectFilePath": "/home/piq2/Downloads/GitHub/MealTracker/Aljas/AljasAuthApi/AljasAuthApi.csproj",
   "expectedPackageFiles": [
     "/home/piq2/.nuget/packages/bouncycastle.cryptography/2.5.0/bouncycastle.cryptography.2.5.0.nupkg.sha512",
     "/home/piq2/.nuget/packages/dnsclient/1.6.1/dnsclient.1.6.1.nupkg.sha512",
