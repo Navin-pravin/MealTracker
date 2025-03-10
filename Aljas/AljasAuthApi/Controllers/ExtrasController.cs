@@ -140,5 +140,37 @@ namespace AljasAuthApi.Controllers
             var designations = await _extrasService.GetDesignationSummaryAsync();
             return Ok(designations);
         }
+
+        // location api
+
+        [HttpPost("add-location")]
+        public async Task<IActionResult> AddLocation([FromBody] CLocation location)
+        {
+            await _extrasService.AddlocationAsync(location);
+            return Ok(new { message = "location added successfully" });
+        }
+
+        [HttpPut("update-location/{id}")]
+        public async Task<IActionResult> UpdateLocation(string id, [FromBody] CLocation location)
+        {
+            var updated = await _extrasService.UpdatelocationAsync(id, location);
+            if (!updated) return NotFound(new { message = "location not found" });
+            return Ok(new { message = "location updated successfully" });
+        }
+
+        [HttpDelete("delete-location/{id}")]
+        public async Task<IActionResult> DeleteLocation(string id)
+        {
+            var deleted = await _extrasService.DeletelocationAsync(id);
+            if (!deleted) return NotFound(new { message = "location not found" });
+            return Ok(new { message = "location deleted successfully" });
+        }
+
+        [HttpGet("location-summary")]
+        public async Task<IActionResult> GetLocationSummary()
+        {
+            var locations = await _extrasService.GetlocationSummaryAsync();
+            return Ok(locations);
+        }
     }
 }

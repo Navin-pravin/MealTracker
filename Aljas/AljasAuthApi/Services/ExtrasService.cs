@@ -12,15 +12,19 @@ namespace AljasAuthApi.Services
         private readonly IMongoCollection<Company> _companies;
         private readonly IMongoCollection<Role> _roles;
         private readonly IMongoCollection<Designation> _designations;
+        private readonly IMongoCollection<CLocation> _locations;
 
         public ExtrasService(MongoDbSettings dbSettings)
         {
+
             var client = new MongoClient(dbSettings.ConnectionString);
             var database = client.GetDatabase(dbSettings.DatabaseName);
             _departments = database.GetCollection<Department>("Departments");
             _companies = database.GetCollection<Company>("Companies");
             _roles = database.GetCollection<Role>("Roles");
             _designations = database.GetCollection<Designation>("Designations");
+            _locations = database.GetCollection<CLocation>("clocations");
+
         }
 
         // ✅ Department Service Methods
@@ -54,5 +58,12 @@ namespace AljasAuthApi.Services
         public async Task<bool> DeleteDesignationAsync(string id) =>
             (await _designations.DeleteOneAsync(d => d.Id == id)).DeletedCount > 0;
         public async Task<List<Designation>> GetDesignationSummaryAsync() => await _designations.Find(_ => true).ToListAsync();
+
+        public async Task AddlocationAsync(CLocation location) => await _locations.InsertOneAsync(location);
+        public async Task<bool> UpdatelocationAsync(string id, CLocation location) =>
+            (await _locations.ReplaceOneAsync(d => d.Id == id, location)).ModifiedCount > 0;
+        public async Task<bool> DeletelocationAsync(string id) =>
+            (await _locations.DeleteOneAsync(d => d.Id == id)).DeletedCount > 0;
+        public async Task<List<CLocation>> GetlocationSummaryAsync() => await _locations.Find(_ => true).ToListAsync();
     }
 }

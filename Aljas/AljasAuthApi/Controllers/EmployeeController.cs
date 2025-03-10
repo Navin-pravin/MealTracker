@@ -122,9 +122,10 @@ public async Task<IActionResult> UploadEmployeesFromExcel(IFormFile file)
                             designation = worksheet.Cells[row, 9]?.Text?.Trim() ?? "",
                             imageUrl = worksheet.Cells[row, 10]?.Text?.Trim() ?? "",
                             Company = worksheet.Cells[row, 11]?.Text?.Trim() ?? "",
-                            Referenceid = worksheet.Cells[row, 12]?.Text?.Trim() ?? "",
-                            CardBadgeNumber = worksheet.Cells[row, 13]?.Text?.Trim() ?? "",
-                            Status = worksheet.Cells[row, 14]?.Text?.Trim() ?? "Inactive" // Default to "Inactive"
+                            location = worksheet.Cells[row, 12]?.Text?.Trim() ?? "",
+                            Referenceid = worksheet.Cells[row, 13]?.Text?.Trim() ?? "",
+                            CardBadgeNumber = worksheet.Cells[row, 14]?.Text?.Trim() ?? "",
+                            Status = worksheet.Cells[row, 15]?.Text?.Trim() ?? "Inactive" // Default to "Inactive"
                         };
 
                         employees.Add(employee);
@@ -173,9 +174,10 @@ public IActionResult DownloadSampleExcel()
         worksheet.Cells[1, 9].Value = "designation";
         worksheet.Cells[1, 10].Value = "imageUrl";
         worksheet.Cells[1, 11].Value = "Company";
-        worksheet.Cells[1, 12].Value = "Referenceid";
-        worksheet.Cells[1, 13].Value = "CardBadgeNumber";
-        worksheet.Cells[1, 14].Value = "Status"; // ✅ New field
+         worksheet.Cells[1, 12].Value = "location";
+        worksheet.Cells[1, 13].Value = "Referenceid";
+        worksheet.Cells[1, 14].Value = "CardBadgeNumber";
+        worksheet.Cells[1, 15].Value = "Status"; // ✅ New field
 
         // ✅ Auto-fit columns for better readability
         worksheet.Cells.AutoFitColumns();
