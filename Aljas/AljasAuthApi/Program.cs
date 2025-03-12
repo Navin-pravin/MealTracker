@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using MongoDB.Driver;
 using System.Text;
-using StackExchange.Redis;
+//sing StackExchange.Redis;
 using ProjectHierarchyApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -59,7 +59,7 @@ builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnC
 
 
 // ✅ Register Redis Connection
-builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(redisSettings.ConnectionString));
+//builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(redisSettings.ConnectionString));
 
 // ✅ Register Services
 builder.Services.AddSingleton<EmailService>();
@@ -72,7 +72,7 @@ builder.Services.AddSingleton<LocationService>();
 builder.Services.AddSingleton<CanteenService>();
 builder.Services.AddSingleton<UserService>();
 builder.Services.AddSingleton<DeviceService>();
-builder.Services.AddSingleton<RedisService>();
+//builder.Services.AddSingleton<RedisService>();
  // ✅ Added RedisService
 builder.Services.AddSingleton<RoleAccessService>();
 builder.Services.AddSingleton<VisitorService>();

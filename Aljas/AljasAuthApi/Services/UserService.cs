@@ -9,15 +9,14 @@ namespace AljasAuthApi.Services
     public class UserService
     {
         private readonly IMongoCollection<User> _users;
-        private readonly RedisService _redisService;
+       
         private readonly RoleAccessService _roleAccessService;
 
-        public UserService(MongoDbSettings dbSettings, RedisService redisService, RoleAccessService roleAccessService)
+        public UserService(MongoDbSettings dbSettings, RoleAccessService roleAccessService)
         {
             var client = new MongoClient(dbSettings.ConnectionString);
             var database = client.GetDatabase(dbSettings.DatabaseName);
             _users = database.GetCollection<User>("Users");
-            _redisService = redisService;
             _roleAccessService = roleAccessService;
         }
 
@@ -55,7 +54,7 @@ namespace AljasAuthApi.Services
             };
 
             await _users.InsertOneAsync(user);
-            await _redisService.PublishEventAsync("UserCreated", user);
+            //await _redisService.PublishEventAsync("UserCreated", user);
         }
 
         // ✅ Update User & Sync RoleAccess

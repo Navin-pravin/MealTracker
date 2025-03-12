@@ -26,7 +26,7 @@ namespace ProjectHierarchyApi.Controllers
         }
 
         // ✅ Create a new location under a project
-        [HttpPost]
+        [HttpPost("add location")]
         public async Task<IActionResult> CreateLocation(Location location)
         {
             await _locationService.CreateLocationAsync(location);
@@ -34,7 +34,7 @@ namespace ProjectHierarchyApi.Controllers
         }
 
         // ✅ Update a location
-        [HttpPut("{id}")]
+        [HttpPut("{id} update location")]
         public async Task<IActionResult> UpdateLocation(string id, Location updatedLocation)
         {
             var success = await _locationService.UpdateLocationAsync(id, updatedLocation);
@@ -43,7 +43,7 @@ namespace ProjectHierarchyApi.Controllers
         }
 
         // ✅ Delete a location
-        [HttpDelete("{id}")]
+        [HttpDelete("{id}Delete location")]
         public async Task<IActionResult> DeleteLocation(string id)
         {
             var success = await _locationService.DeleteLocationAsync(id);

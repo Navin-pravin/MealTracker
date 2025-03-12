@@ -17,18 +17,18 @@ namespace ProjectHierarchyApi.Controllers
             _projectService = projectService;
         }
 
-        [HttpGet]
+        [HttpGet ("project summary")]
         public async Task<ActionResult<List<Project>>> GetAllProjects() =>
             await _projectService.GetAllProjectsAsync();
 
-        [HttpPost]
+        [HttpPost("add project")]
         public async Task<IActionResult> CreateProject(Project project)
         {
             await _projectService.CreateProjectAsync(project);
             return Ok();
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("{id} update project")]
         public async Task<IActionResult> UpdateProject(string id, Project updatedProject)
         {
             var success = await _projectService.UpdateProjectAsync(id, updatedProject);
@@ -36,7 +36,7 @@ namespace ProjectHierarchyApi.Controllers
             return Ok();
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{id} delete project")]
         public async Task<IActionResult> DeleteProject(string id)
         {
             var success = await _projectService.DeleteProjectAsync(id);

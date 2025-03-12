@@ -78,7 +78,7 @@ namespace AljasAuthApi.Controllers
 
             return Ok(new { message = "Employee deleted successfully" });
         }
-        [HttpPost("upload-excel")]
+       [HttpPost("upload-excel")]
 public async Task<IActionResult> UploadEmployeesFromExcel(IFormFile file)
 {
     if (file == null || file.Length == 0)
@@ -125,7 +125,7 @@ public async Task<IActionResult> UploadEmployeesFromExcel(IFormFile file)
                             location = worksheet.Cells[row, 12]?.Text?.Trim() ?? "",
                             Referenceid = worksheet.Cells[row, 13]?.Text?.Trim() ?? "",
                             CardBadgeNumber = worksheet.Cells[row, 14]?.Text?.Trim() ?? "",
-                            Status = worksheet.Cells[row, 15]?.Text?.Trim() ?? "Inactive" // Default to "Inactive"
+                            Status = worksheet.Cells[row, 15]?.Text?.Trim() ?? "Inactive"
                         };
 
                         employees.Add(employee);
@@ -138,9 +138,11 @@ public async Task<IActionResult> UploadEmployeesFromExcel(IFormFile file)
             }
         }
 
-        bool uploaded = await _employeeService.BulkUploadEmployeesFromExcelAsync(employees);
-        if (!uploaded)
-            return StatusCode(500, new { message = "Failed to upload employees. Check server logs." });
+        // ✅ Correct the method call to match the expected return type
+        (bool success, List<EmployeeUploadError> errors) = await _employeeService.BulkUploadEmployeesFromExcelAsync(employees);
+
+        if (errors.Count > 0)
+            return BadRequest(new { message = "Some records were invalid. Download the error report.", errors });
 
         return Ok(new { message = $"{employees.Count} employees uploaded successfully." });
     }
@@ -153,43 +155,54 @@ public async Task<IActionResult> UploadEmployeesFromExcel(IFormFile file)
 
 
         // ✅ Sample Excel Download API (No async needed)
-        [HttpGet("download-sample")]
-public IActionResult DownloadSampleExcel()
+       [HttpGet("download-error-report")]
+public async Task<IActionResult> DownloadErrorReport()
 {
-    var stream = new MemoryStream();
+    var errorReports = await _employeeService.GetUploadErrorsAsync();
+    
+    if (errorReports == null || errorReports.Count == 0)
+        return NotFound(new { message = "No errors found." });
 
-    using (var package = new ExcelPackage(stream))
+    using var package = new ExcelPackage();
+    var worksheet = package.Workbook.Worksheets.Add("UploadErrors");
+
+    // ✅ Set up headers
+    worksheet.Cells[1, 1].Value = "RowNumber";
+    worksheet.Cells[1, 2].Value = "IDNumber";
+    worksheet.Cells[1, 3].Value = "Firstname";
+    worksheet.Cells[1, 4].Value = "Lastname";
+    worksheet.Cells[1, 5].Value = "Dept";
+    worksheet.Cells[1, 6].Value = "Role";
+    worksheet.Cells[1, 7].Value = "Designation";
+    worksheet.Cells[1, 8].Value = "Company";
+    worksheet.Cells[1, 9].Value = "Location";
+    worksheet.Cells[1, 10].Value = "Errors";
+
+    int row = 2;
+    foreach (var error in errorReports)
     {
-        var worksheet = package.Workbook.Worksheets.Add("Employee Template");
+        worksheet.Cells[row, 1].Value = error.RowNumber;
+        worksheet.Cells[row, 2].Value = error.EmployeeData.IDNumber;
+        worksheet.Cells[row, 3].Value = error.EmployeeData.Firstname;
+        worksheet.Cells[row, 4].Value = error.EmployeeData.Lastname;
+        worksheet.Cells[row, 5].Value = error.EmployeeData.Dept;
+        worksheet.Cells[row, 6].Value = error.EmployeeData.Role;
+        worksheet.Cells[row, 7].Value = error.EmployeeData.designation;
+        worksheet.Cells[row, 8].Value = error.EmployeeData.Company;
+        worksheet.Cells[row, 9].Value = error.EmployeeData.location;
+        worksheet.Cells[row, 10].Value = string.Join("; ", error.Errors.Values);
 
-        // ✅ Add headers
-        worksheet.Cells[1, 1].Value = "IDNumber";
-        worksheet.Cells[1, 2].Value = "Firstname";
-        worksheet.Cells[1, 3].Value = "Lastname";
-        worksheet.Cells[1, 4].Value = "StartDate";
-        worksheet.Cells[1, 5].Value = "EndDate";
-        worksheet.Cells[1, 6].Value = "Phone_no";
-        worksheet.Cells[1, 7].Value = "Dept";
-        worksheet.Cells[1, 8].Value = "Role";
-        worksheet.Cells[1, 9].Value = "designation";
-        worksheet.Cells[1, 10].Value = "imageUrl";
-        worksheet.Cells[1, 11].Value = "Company";
-         worksheet.Cells[1, 12].Value = "location";
-        worksheet.Cells[1, 13].Value = "Referenceid";
-        worksheet.Cells[1, 14].Value = "CardBadgeNumber";
-        worksheet.Cells[1, 15].Value = "Status"; // ✅ New field
-
-        // ✅ Auto-fit columns for better readability
-        worksheet.Cells.AutoFitColumns();
-
-        // ✅ Save the Excel package
-        package.Save();
+        row++;
     }
 
+    // ✅ Convert to a downloadable file
+    var stream = new MemoryStream();
+    package.SaveAs(stream);
     stream.Position = 0;
     var contentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
-    var fileName = "Employee_BulkUpload_Template.xlsx";
+    var fileName = "EmployeeUploadErrors.xlsx";
 
     return File(stream, contentType, fileName);
 }
+
     }}

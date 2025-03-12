@@ -26,7 +26,7 @@ namespace ProjectHierarchyApi.Controllers
         }
 
         // ✅ Create a new canteen under a project and location
-        [HttpPost]
+        [HttpPost("add canteen")]
         public async Task<IActionResult> CreateCanteen(Canteen canteen)
         {
             await _canteenService.CreateCanteenAsync(canteen);
@@ -34,7 +34,7 @@ namespace ProjectHierarchyApi.Controllers
         }
 
         // ✅ Update a canteen
-        [HttpPut("{id}")]
+        [HttpPut("{id} update canteen")]
         public async Task<IActionResult> UpdateCanteen(string id, Canteen updatedCanteen)
         {
             var success = await _canteenService.UpdateCanteenAsync(id, updatedCanteen);
@@ -43,7 +43,7 @@ namespace ProjectHierarchyApi.Controllers
         }
 
         // ✅ Delete a canteen
-        [HttpDelete("{id}")]
+        [HttpDelete("{id} delete")]
         public async Task<IActionResult> DeleteCanteen(string id)
         {
             var success = await _canteenService.DeleteCanteenAsync(id);

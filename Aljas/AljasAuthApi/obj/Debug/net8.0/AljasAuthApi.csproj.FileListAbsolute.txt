@@ -581,11 +581,9 @@
 /home/piq2/Downloads/GitHub/MealTracker/Aljas/AljasAuthApi/bin/Debug/net8.0/MongoDB.Bson.dll
 /home/piq2/Downloads/GitHub/MealTracker/Aljas/AljasAuthApi/bin/Debug/net8.0/MongoDB.Driver.dll
 /home/piq2/Downloads/GitHub/MealTracker/Aljas/AljasAuthApi/bin/Debug/net8.0/Newtonsoft.Json.dll
-/home/piq2/Downloads/GitHub/MealTracker/Aljas/AljasAuthApi/bin/Debug/net8.0/Pipelines.Sockets.Unofficial.dll
 /home/piq2/Downloads/GitHub/MealTracker/Aljas/AljasAuthApi/bin/Debug/net8.0/RabbitMQ.Client.dll
 /home/piq2/Downloads/GitHub/MealTracker/Aljas/AljasAuthApi/bin/Debug/net8.0/SharpCompress.dll
 /home/piq2/Downloads/GitHub/MealTracker/Aljas/AljasAuthApi/bin/Debug/net8.0/Snappier.dll
-/home/piq2/Downloads/GitHub/MealTracker/Aljas/AljasAuthApi/bin/Debug/net8.0/StackExchange.Redis.dll
 /home/piq2/Downloads/GitHub/MealTracker/Aljas/AljasAuthApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
 /home/piq2/Downloads/GitHub/MealTracker/Aljas/AljasAuthApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /home/piq2/Downloads/GitHub/MealTracker/Aljas/AljasAuthApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
