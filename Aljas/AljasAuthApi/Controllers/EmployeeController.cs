@@ -44,17 +44,22 @@ namespace AljasAuthApi.Controllers
 
 
         [HttpPost("add-employee")]
-        public async Task<IActionResult> CreateEmployee([FromBody] Employee? employee)
-        {
-            if (employee == null)
-                return BadRequest(new { message = "Invalid employee data." });
+public async Task<IActionResult> CreateEmployee([FromBody] Employee? employee)
+{
+    if (employee == null)
+        return BadRequest(new { message = "Invalid employee data." });
 
-            bool created = await _employeeService.CreateEmployeeAsync(employee);
-            if (!created)
-                return StatusCode(500, new { message = "Failed to create employee." });
+    bool created = await _employeeService.CreateEmployeeAsync(employee);
+    if (!created)
+        return StatusCode(500, new { message = "Failed to create employee." });
 
-            return CreatedAtAction(nameof(GetEmployeeById), new { id = employee.Id }, employee);
-        }
+    return Ok(new 
+    { 
+        message = "Employee created successfully", 
+        employee = employee 
+    });
+}
+
 
         [HttpPut("update-employee/{id}")]
         public async Task<IActionResult> UpdateEmployee(string id, [FromBody] Employee? updatedEmployee)
