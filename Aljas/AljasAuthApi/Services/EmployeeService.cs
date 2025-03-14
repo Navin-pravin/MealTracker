@@ -12,18 +12,17 @@ namespace AljasAuthApi.Services
     {
         private readonly IMongoCollection<Employee> _employees;
         private readonly IMongoCollection<EmployeeUploadError> _employeeUploadErrors;
-        private readonly ExtrasService _extrasService; // ✅ Added ExtrasService
+        private readonly ExtrasService _extrasService;
 
-        public EmployeeService(MongoDbSettings settings, ExtrasService extrasService) // ✅ Inject ExtrasService
+        public EmployeeService(MongoDbSettings settings, ExtrasService extrasService)
         {
             var client = new MongoClient(settings.ConnectionString);
             var database = client.GetDatabase(settings.DatabaseName);
             _employees = database.GetCollection<Employee>(settings.EmployeesCollectionName);
-            _employeeUploadErrors = database.GetCollection<EmployeeUploadError>("EmployeeUploadErrors"); 
-            _extrasService = extrasService; // ✅ Assign the injected service
+            _employeeUploadErrors = database.GetCollection<EmployeeUploadError>("EmployeeUploadErrors");
+            _extrasService = extrasService;
         }
 
-        // ✅ Get all employees with optional filters (Firstname & Department)
         public async Task<List<Employee>> GetAllEmployeesAsync(string? Firstname = null, string? Dept = null)
         {
             var filter = Builders<Employee>.Filter.Empty;
@@ -37,148 +36,130 @@ namespace AljasAuthApi.Services
             return await _employees.Find(filter).ToListAsync();
         }
 
-        // ✅ Get a specific employee by ID
         public async Task<Employee?> GetEmployeeByIdAsync(string id) =>
             await _employees.Find(emp => emp.Id == id).FirstOrDefaultAsync();
 
-        // ✅ Add a new employee
-      public async Task<bool> CreateEmployeeAsync(Employee employee)
-{
-    if (employee == null) return false;
+        public async Task<bool> CreateEmployeeAsync(Employee employee)
+        {
+            if (employee == null) return false;
 
-    // ✅ Check if IDNumber already exists
-    var existingEmployee = await _employees.Find(emp => emp.IDNumber == employee.IDNumber).FirstOrDefaultAsync();
-    if (existingEmployee != null)
-    {
-        Console.WriteLine($"❌ Duplicate IDNumber: {employee.IDNumber} already exists.");
-        return false;
-    }
+            var existingEmployee = await _employees.Find(emp => emp.IDNumber == employee.IDNumber).FirstOrDefaultAsync();
+            if (existingEmployee != null)
+            {
+                Console.WriteLine($"❌ Duplicate IDNumber: {employee.IDNumber} already exists.");
+                return false;
+            }
 
-    employee.Id = Guid.NewGuid().ToString();
+            employee.Id = Guid.NewGuid().ToString();
+            try
+            {
+                await _employees.InsertOneAsync(employee);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"❌ Failed to create employee: {ex.Message}");
+                return false;
+            }
+        }
 
-    try
-    {
-        await _employees.InsertOneAsync(employee);
-        return true;
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"❌ Failed to create employee: {ex.Message}");
-        return false;
-    }
-}
-
-
-        // ✅ Update an existing employee
         public async Task<bool> UpdateEmployeeAsync(string id, Employee updatedEmployee)
         {
             var result = await _employees.ReplaceOneAsync(emp => emp.Id == id, updatedEmployee);
             return result.ModifiedCount > 0;
         }
 
-        // ✅ Delete an employee by ID
         public async Task<bool> DeleteEmployeeAsync(string id)
         {
             var result = await _employees.DeleteOneAsync(emp => emp.Id == id);
             return result.DeletedCount > 0;
         }
 
-        // ✅ Bulk Upload Employees from Excel (with Extras validation)
-public async Task<(bool success, List<EmployeeUploadError> errors)> BulkUploadEmployeesFromExcelAsync(List<Employee> employees)
-{
-    if (employees == null || employees.Count == 0)
-        return (false, new List<EmployeeUploadError>()); // ✅ Return empty list instead of just false
-
-    var validEmployees = new List<Employee>();
-    var errorReports = new List<EmployeeUploadError>();
-
-    // Fetch valid values from ExtrasService
-    // Convert all valid values to lowercase for case-insensitive comparison
-var validDepartments = (await _extrasService.GetDepartmentSummaryAsync()).ConvertAll(d => d.DepartmentName.ToLower());
-var validCompanies = (await _extrasService.GetCompanySummaryAsync()).ConvertAll(c => c.CompanyName.ToLower());
-var validRoles = (await _extrasService.GetRoleSummaryAsync()).ConvertAll(r => r.RoleTitle.ToLower());
-var validDesignations = (await _extrasService.GetDesignationSummaryAsync()).ConvertAll(d => d.DesignationTitle.ToLower());
-var validLocations = (await _extrasService.GetlocationSummaryAsync()).ConvertAll(l => l.location.ToLower());
-
-
-    int rowNumber = 2; // Assuming first row is header
-
-    // Fetch existing IDNumbers from MongoDB
-    var existingEmployees = await _employees.Find(_ => true).Project(e => e.IDNumber).ToListAsync();
-    var existingIDNumbers = new HashSet<string>(existingEmployees);
-    var newIDNumbers = new HashSet<string>();
-
-    foreach (var employee in employees)
-    {
-        var fieldErrors = new Dictionary<string, string>();
-
-        // Check if IDNumber exists in MongoDB
-        if (existingIDNumbers.Contains(employee.IDNumber))
+        public async Task<(bool success, List<EmployeeUploadError> errors)> BulkUploadEmployeesFromExcelAsync(List<Employee> employees)
         {
-            fieldErrors["IDNumber"] = $"Duplicate IDNumber: {employee.IDNumber} already exists in database.";
-        }
-        else if (!newIDNumbers.Add(employee.IDNumber))
-        {
-            fieldErrors["IDNumber"] = $"Duplicate IDNumber: {employee.IDNumber} appears multiple times in the uploaded file.";
-        }
+            if (employees == null || employees.Count == 0)
+                return (false, new List<EmployeeUploadError>());
 
-        if (!fieldErrors.ContainsKey("IDNumber")) // Validate other fields only if IDNumber is valid
-        {
-           if (!validDepartments.Contains(employee.Dept.ToLower()))
-    fieldErrors["Dept"] = $"Invalid Department: {employee.Dept}";
+            var validEmployees = new List<Employee>();
+            var errorReports = new List<EmployeeUploadError>();
 
-if (!validCompanies.Contains(employee.Company.ToLower()))
-    fieldErrors["Company"] = $"Invalid Company: {employee.Company}";
+            var validDepartments = (await _extrasService.GetDepartmentSummaryAsync()).ConvertAll(d => d.DepartmentName.ToLower());
+            var validCompanies = (await _extrasService.GetCompanySummaryAsync()).ConvertAll(c => c.CompanyName.ToLower());
+            var validRoles = (await _extrasService.GetRoleSummaryAsync()).ConvertAll(r => r.RoleTitle.ToLower());
+            var validDesignations = (await _extrasService.GetDesignationSummaryAsync()).ConvertAll(d => d.DesignationTitle.ToLower());
+            var validLocations = (await _extrasService.GetlocationSummaryAsync()).ConvertAll(l => l.location.ToLower());
 
-if (!validRoles.Contains(employee.Role.ToLower()))
-    fieldErrors["Role"] = $"Invalid Role: {employee.Role}";
+            int rowNumber = 2;
 
-if (!validDesignations.Contains(employee.designation.ToLower()))
-    fieldErrors["Designation"] = $"Invalid Designation: {employee.designation}";
+            var existingEmployees = await _employees.Find(_ => true).Project(e => e.IDNumber).ToListAsync();
+            var existingIDNumbers = new HashSet<string>(existingEmployees);
+            var newIDNumbers = new HashSet<string>();
 
-if (!validLocations.Contains(employee.location.ToLower()))
-    fieldErrors["Location"] = $"Invalid Location: {employee.location}";
-
-        }
-
-        if (fieldErrors.Count == 0)
-        {
-            employee.Id = Guid.NewGuid().ToString();
-            validEmployees.Add(employee);
-        }
-        else
-        {
-            errorReports.Add(new EmployeeUploadError
+            foreach (var employee in employees)
             {
-                Id = ObjectId.GenerateNewId().ToString(),
-                RowNumber = rowNumber,
-                EmployeeData = employee, // Store full employee data
-                Errors = fieldErrors // Store only error messages
-            });
+                var fieldErrors = new Dictionary<string, string>();
+
+                if (existingIDNumbers.Contains(employee.IDNumber))
+                {
+                    fieldErrors["IDNumber"] = $"Duplicate IDNumber: {employee.IDNumber} already exists in database.";
+                }
+                else if (!newIDNumbers.Add(employee.IDNumber))
+                {
+                    fieldErrors["IDNumber"] = $"Duplicate IDNumber: {employee.IDNumber} appears multiple times in the uploaded file.";
+                }
+
+                if (!fieldErrors.ContainsKey("IDNumber"))
+                {
+                    if (!validDepartments.Contains(employee.Dept.ToLower()))
+                        fieldErrors["Dept"] = $"Invalid Department: {employee.Dept}";
+                    
+                    if (!validCompanies.Contains(employee.Company.ToLower()))
+                        fieldErrors["Company"] = $"Invalid Company: {employee.Company}";
+                    
+                    if (!validRoles.Contains(employee.Role.ToLower()))
+                        fieldErrors["Role"] = $"Invalid Role: {employee.Role}";
+                    
+                    if (!validDesignations.Contains(employee.designation.ToLower()))
+                        fieldErrors["Designation"] = $"Invalid Designation: {employee.designation}";
+                    
+                    if (!validLocations.Contains(employee.location.ToLower()))
+                        fieldErrors["Location"] = $"Invalid Location: {employee.location}";
+                }
+
+                if (fieldErrors.Count == 0)
+                {
+                    employee.Id = Guid.NewGuid().ToString();
+                    validEmployees.Add(employee);
+                }
+                else
+                {
+                    errorReports.Add(new EmployeeUploadError
+                    {
+                        Id = ObjectId.GenerateNewId().ToString(),
+                        RowNumber = rowNumber,
+                        EmployeeData = employee,
+                        Errors = fieldErrors
+                    });
+                }
+                rowNumber++;
+            }
+
+            if (validEmployees.Count > 0)
+            {
+                await _employees.InsertManyAsync(validEmployees);
+            }
+
+            if (errorReports.Count > 0)
+            {
+                await _employeeUploadErrors.InsertManyAsync(errorReports);
+            }
+
+            return (validEmployees.Count > 0, errorReports);
         }
-        rowNumber++;
-    }
 
-    // Insert valid employees
-    if (validEmployees.Count > 0)
-    {
-        await _employees.InsertManyAsync(validEmployees);
-    }
-
-    // Store errors in MongoDB for later download
-    if (errorReports.Count > 0)
-    {
-        await _employeeUploadErrors.InsertManyAsync(errorReports);
-    }
-
-    return (validEmployees.Count > 0, errorReports); // ✅ Return (bool, List<EmployeeUploadError>)
-}
-
-public async Task<List<EmployeeUploadError>> GetUploadErrorsAsync()
-{
-    return await _employeeUploadErrors.Find(_ => true).ToListAsync();
-}
-
-
+        public async Task<List<EmployeeUploadError>> GetUploadErrorsAsync()
+        {
+            return await _employeeUploadErrors.Find(_ => true).ToListAsync();
+        }
     }
 }

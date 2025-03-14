@@ -125,7 +125,7 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Aljas Authentication API V1");
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Meal Tracking Api's");
     c.RoutePrefix = string.Empty;
 });
 

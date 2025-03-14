@@ -21,12 +21,23 @@ namespace AljasAuthApi.Controllers
             _employeeService = employeeService;
         }
 
-        [HttpGet("Employee-Summary")]
-        public async Task<IActionResult> GetAllEmployees([FromQuery] string? Firstname = null, [FromQuery] string? Dept = null)
-        {
-            var employees = await _employeeService.GetAllEmployeesAsync(Firstname, Dept);
-            return Ok(employees);
-        }
+       [HttpGet("Employee-Summary")]
+public async Task<IActionResult> GetAllEmployees([FromQuery] string? clientid)
+{
+    // ✅ Define allowed Client ID (Set your actual value)
+    string allowedClientId = "c01";
+
+    // ✅ Validate the client ID
+    if (string.IsNullOrEmpty(clientid) || clientid != allowedClientId)
+    {
+        return Unauthorized(new { message = "Invalid Client ID." });
+    }
+
+    // ✅ Fetch employees only if the client ID matches
+    var employees = await _employeeService.GetAllEmployeesAsync();
+    return Ok(employees);
+}
+
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetEmployeeById(string id)
