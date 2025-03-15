@@ -3,6 +3,7 @@ using AljasAuthApi.Config;
 using MongoDB.Driver;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using MongoDB.Bson;
 
 namespace AljasAuthApi.Services
 {
@@ -27,13 +28,37 @@ namespace AljasAuthApi.Services
 
         }
 
-        // ✅ Department Service Methods
-        public async Task AddDepartmentAsync(Department department) => await _departments.InsertOneAsync(department);
-        public async Task<bool> UpdateDepartmentAsync(string id, Department department) =>
-            (await _departments.ReplaceOneAsync(d => d.Id == id, department)).ModifiedCount > 0;
-        public async Task<bool> DeleteDepartmentAsync(string id) =>
-            (await _departments.DeleteOneAsync(d => d.Id == id)).DeletedCount > 0;
-        public async Task<List<Department>> GetDepartmentSummaryAsync() => await _departments.Find(_ => true).ToListAsync();
+         // ✅ Add Department
+        public async Task AddDepartmentAsync(Department department) 
+        {
+            department.Id = ObjectId.GenerateNewId().ToString(); // Ensure ObjectId is generated
+            await _departments.InsertOneAsync(department);
+        }
+
+        // ✅ Update Department
+        public async Task<bool> UpdateDepartmentAsync(string id, Department department)
+        {
+            var filter = Builders<Department>.Filter.Eq(d => d.Id, id);
+            var update = Builders<Department>.Update
+                .Set(d => d.DepartmentName, department.DepartmentName)
+                .Set(d => d.Description, department.Description);
+
+            var result = await _departments.UpdateOneAsync(filter, update);
+            return result.ModifiedCount > 0;
+        }
+
+        // ✅ Delete Department
+        public async Task<bool> DeleteDepartmentAsync(string id)
+        {
+            var result = await _departments.DeleteOneAsync(d => d.Id == id);
+            return result.DeletedCount > 0;
+        }
+
+        // ✅ Get All Departments
+        public async Task<List<Department>> GetDepartmentSummaryAsync()
+        {
+            return await _departments.Find(_ => true).ToListAsync();
+        }
 
         // ✅ Company Service Methods
         public async Task AddCompanyAsync(Company company) => await _companies.InsertOneAsync(company);

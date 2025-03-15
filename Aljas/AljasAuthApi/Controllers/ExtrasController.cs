@@ -17,30 +17,43 @@ namespace AljasAuthApi.Controllers
             _extrasService = extrasService;
         }
 
-        // ✅ Department APIs
         [HttpPost("add-department")]
         public async Task<IActionResult> AddDepartment([FromBody] Department department)
         {
+            if (department == null || string.IsNullOrEmpty(department.DepartmentName))
+                return BadRequest(new { message = "Invalid department data" });
+
             await _extrasService.AddDepartmentAsync(department);
             return Ok(new { message = "Department added successfully" });
         }
 
+        // ✅ Update Department
         [HttpPut("update-department/{id}")]
         public async Task<IActionResult> UpdateDepartment(string id, [FromBody] Department department)
         {
+            if (string.IsNullOrEmpty(id) || department == null)
+                return BadRequest(new { message = "Invalid request" });
+
             var updated = await _extrasService.UpdateDepartmentAsync(id, department);
             if (!updated) return NotFound(new { message = "Department not found" });
+
             return Ok(new { message = "Department updated successfully" });
         }
 
+        // ✅ Delete Department
         [HttpDelete("delete-department/{id}")]
         public async Task<IActionResult> DeleteDepartment(string id)
         {
+            if (string.IsNullOrEmpty(id))
+                return BadRequest(new { message = "Invalid ID" });
+
             var deleted = await _extrasService.DeleteDepartmentAsync(id);
             if (!deleted) return NotFound(new { message = "Department not found" });
+
             return Ok(new { message = "Department deleted successfully" });
         }
 
+        // ✅ Get All Departments
         [HttpGet("department-summary")]
         public async Task<IActionResult> GetDepartmentSummary()
         {
