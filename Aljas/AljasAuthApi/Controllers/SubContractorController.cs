@@ -20,12 +20,18 @@ namespace AljasAuthApi.Controllers
             _subContractorService = subContractorService;
         }
 
-        [HttpGet("summary")]
-        public async Task<IActionResult> GetAllSubContractors([FromQuery] string? name = null, [FromQuery] string? company = null)
-        {
-            var subContractors = await _subContractorService.GetAllSubContractorsAsync(name, company);
-            return Ok(subContractors);
-        }
+      [HttpGet("summary")]
+public async Task<IActionResult> GetAllSubContractors([FromQuery] string clientid )
+{
+    // ✅ Enforce client ID check
+    if (clientid != "c01")
+    {
+        return Unauthorized(new { message = "Invalid client ID" });
+    }
+
+    var subContractors = await _subContractorService.GetAllSubContractorsAsync();
+    return Ok(subContractors);
+}
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetSubContractorById(string id)

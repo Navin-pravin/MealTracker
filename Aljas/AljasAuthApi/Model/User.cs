@@ -25,8 +25,8 @@ namespace AljasAuthApi.Models
         [BsonElement("RoleName")] // ✅ Ensures consistency across user & role
         public required string RoleName { get; set; } // e.g., "SuperAdmin", "Admin", "User"
 
-        [BsonElement("RoleAccess")]
-        public required List<string> RoleAccess { get; set; } = new(); // Modules user can access
+        [BsonElement("AllowedModules")]
+        public required List<string> AllowedModules { get; set; } = new(); // Modules user can access
 
         public string? OTP { get; set; }
         public DateTime? OTPGeneratedAt { get; set; }

@@ -31,5 +31,8 @@ namespace ProjectHierarchyApi.Services
             var result = await _canteens.DeleteOneAsync(c => c.Id == id);
             return result.DeletedCount > 0;
         }
+        public async Task<Canteen?> GetCanteenByIdAsync(string canteenId) =>
+    await _canteens.Find(c => c.Id == canteenId).FirstOrDefaultAsync();
+
     }
 }

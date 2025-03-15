@@ -14,6 +14,7 @@ using ProjectHierarchyApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 // ✅ Load MongoDB Settings (or use default if not found)
 var mongoSettings = builder.Configuration.GetSection("MongoDbSettings").Get<MongoDbSettings>() ?? new MongoDbSettings
 {
@@ -74,10 +75,11 @@ builder.Services.AddSingleton<UserService>();
 builder.Services.AddSingleton<DeviceService>();
 //builder.Services.AddSingleton<RedisService>();
  // ✅ Added RedisService
-builder.Services.AddSingleton<RoleAccessService>();
+
 builder.Services.AddSingleton<VisitorService>();
 builder.Services.AddSingleton<RabbitMQService>();
 builder.Services.AddSingleton<ExtrasService>();
+builder.Services.AddSingleton<CanteenConfigurationService>();
 
 
 // ✅ Add Controllersbuilder.Services.AddSingleton<VisitorService>()

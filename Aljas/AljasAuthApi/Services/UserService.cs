@@ -9,15 +9,12 @@ namespace AljasAuthApi.Services
     public class UserService
     {
         private readonly IMongoCollection<User> _users;
-       
-        private readonly RoleAccessService _roleAccessService;
 
-        public UserService(MongoDbSettings dbSettings, RoleAccessService roleAccessService)
+        public UserService(MongoDbSettings dbSettings)
         {
             var client = new MongoClient(dbSettings.ConnectionString);
             var database = client.GetDatabase(dbSettings.DatabaseName);
             _users = database.GetCollection<User>("Users");
-            _roleAccessService = roleAccessService;
         }
 
         // ✅ Get User Summary
@@ -31,18 +28,14 @@ namespace AljasAuthApi.Services
                     Email = u.Email,
                     ContactNo = u.ContactNo,
                     RoleName = u.RoleName,
-                    RoleAccess = u.RoleAccess
+                    RoleAccess = u.AllowedModules
                 })
                 .ToListAsync();
         }
 
-        // ✅ Create User with Role Sync
+        // ✅ Create User (Without Role Sync)
         public async Task CreateUserAsync(CreateUserRequest request)
         {
-            var roleAccess = await _roleAccessService.GetRoleAccessAsync(request.RoleName);
-            if (roleAccess == null)
-                throw new Exception("Invalid Role. Cannot create user.");
-
             var user = new User
             {
                 Username = request.Username,
@@ -50,27 +43,21 @@ namespace AljasAuthApi.Services
                 ContactNo = request.ContactNo,
                 Password = request.Password,
                 RoleName = request.RoleName,
-                RoleAccess = roleAccess.RoleAccess // ✅ Auto-sync RoleAccess
+                AllowedModules = request.AllowedModules // ✅ No Role Sync, Uses Request Data
             };
 
             await _users.InsertOneAsync(user);
-            //await _redisService.PublishEventAsync("UserCreated", user);
         }
 
-        // ✅ Update User & Sync RoleAccess
+        // ✅ Update User (No Role Sync)
         public async Task<bool> UpdateUserAsync(UpdateUserRequest request)
         {
             var update = Builders<User>.Update
                 .Set(u => u.Username, request.Username)
                 .Set(u => u.Email, request.Email)
                 .Set(u => u.ContactNo, request.ContactNo)
-                .Set(u => u.RoleName, request.RoleName);
-
-            var roleAccess = await _roleAccessService.GetRoleAccessAsync(request.RoleName);
-            if (roleAccess != null)
-            {
-                update = update.Set(u => u.RoleAccess, roleAccess.RoleAccess);
-            }
+                .Set(u => u.RoleName, request.RoleName)
+                .Set(u => u.AllowedModules, request.AllowedModules); // ✅ Directly Updates AllowedModules
 
             if (!string.IsNullOrEmpty(request.Password))
             {
