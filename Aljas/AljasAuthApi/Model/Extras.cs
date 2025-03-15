@@ -7,25 +7,29 @@ namespace AljasAuthApi.Models
     public class Department
     {
         [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
+        [BsonRepresentation(BsonType.String)]
         public string Id { get; set; } = Guid.NewGuid().ToString();
         public required string DepartmentName { get; set; }
+        public required string description{ get; set; }
+
     }
 
     public class Company
     {
         [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
+        [BsonRepresentation(BsonType.String)]
         public string Id { get; set; } = Guid.NewGuid().ToString();
         public required string CompanyName { get; set; }
+        public required string description{ get; set; }
     }
 
     public class Role
     {
         [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
+        [BsonRepresentation(BsonType.String)]
         public string Id { get; set; } = Guid.NewGuid().ToString();
         public required string RoleTitle { get; set; }
+        public required string description { get; set; }
         public required List<string> CanteenAccess { get; set; } = new();
         public required List<string> MealAccess { get; set; } = new();
     }
@@ -33,16 +37,18 @@ namespace AljasAuthApi.Models
     public class Designation
     {
         [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
+        [BsonRepresentation(BsonType.String)]
         public string Id { get; set; } = Guid.NewGuid().ToString();
         public required string DesignationTitle { get; set; }
+    public required string description { get; set; }
     }
     public class CLocation
     {
         [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
+        [BsonRepresentation(BsonType.String)]
         public string Id { get; set; } 
         public required string location { get; set; }
+        public required string description { get; set; }
     }
 
 }
