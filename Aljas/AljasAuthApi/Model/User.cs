@@ -1,6 +1,6 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using System.Collections.Generic;
+using System;
 
 namespace AljasAuthApi.Models
 {
@@ -25,14 +25,10 @@ namespace AljasAuthApi.Models
         [BsonElement("RoleName")] // ✅ Ensures consistency across user & role
         public required string RoleName { get; set; } // e.g., "SuperAdmin", "Admin", "User"
 
-        [BsonElement("AllowedModules")]
-        public required List<string> AllowedModules { get; set; } = new(); // Modules user can access
-
         public string? OTP { get; set; }
         public DateTime? OTPGeneratedAt { get; set; }
 
-    [BsonElement("CreatedAt")]
-public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-
-}
+        [BsonElement("CreatedAt")]
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    }
 }

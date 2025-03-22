@@ -18,37 +18,45 @@ namespace ProjectHierarchyApi.Controllers
         }
 
         // ✅ Get all canteens for a given project and location
-        [HttpGet("project/{projectId}/location/{locationId}")]
-        public async Task<ActionResult<List<Canteen>>> GetCanteensByLocation(string projectId, string locationId)
+        [HttpGet("canteen-summary")]
+        public async Task<ActionResult<List<Canteen>>> GetCanteensByLocation( string locationId)
         {
             var canteens = await _canteenService.GetCanteensByLocationIdAsync(locationId);
             return Ok(canteens);
         }
 
         // ✅ Create a new canteen under a project and location
-        [HttpPost("add canteen")]
+        [HttpPost("add-canteen")]
         public async Task<IActionResult> CreateCanteen(Canteen canteen)
         {
             await _canteenService.CreateCanteenAsync(canteen);
             return Ok(new { message = "Canteen created successfully" });
         }
 
-        // ✅ Update a canteen
-        [HttpPut("{id} update canteen")]
-        public async Task<IActionResult> UpdateCanteen(string id, Canteen updatedCanteen)
-        {
-            var success = await _canteenService.UpdateCanteenAsync(id, updatedCanteen);
-            if (!success) return NotFound(new { message = "Canteen not found" });
-            return Ok(new { message = "Canteen updated successfully" });
-        }
+       [HttpPut("{id}update-canteen")]
+public async Task<IActionResult> UpdateCanteen(string id, [FromBody] Canteen updatedCanteen)
+{
+    if (string.IsNullOrEmpty(id) || updatedCanteen == null)
+        return BadRequest(new { message = "Invalid request data" });
 
-        // ✅ Delete a canteen
-        [HttpDelete("{id} delete")]
-        public async Task<IActionResult> DeleteCanteen(string id)
-        {
-            var success = await _canteenService.DeleteCanteenAsync(id);
-            if (!success) return NotFound(new { message = "Canteen not found" });
-            return Ok(new { message = "Canteen deleted successfully" });
-        }
+    var success = await _canteenService.UpdateCanteenAsync(id, updatedCanteen);
+    if (!success) return NotFound(new { message = "Canteen not found" });
+
+    return Ok(new { message = "Canteen updated successfully" });
+}
+
+// ✅ Delete a canteen
+[HttpDelete("{id}delete-canteen")]
+public async Task<IActionResult> DeleteCanteen(string id)
+{
+    if (string.IsNullOrEmpty(id))
+        return BadRequest(new { message = "Canteen ID is required" });
+
+    var success = await _canteenService.DeleteCanteenAsync(id);
+    if (!success) return NotFound(new { message = "Canteen not found" });
+
+    return Ok(new { message = "Canteen deleted successfully" });
+}
+
     }
 }

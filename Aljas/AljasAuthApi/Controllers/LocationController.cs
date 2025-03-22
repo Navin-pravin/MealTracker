@@ -3,6 +3,7 @@ using ProjectHierarchyApi.Models;
 using ProjectHierarchyApi.Services;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using MongoDB.Bson;
 
 namespace ProjectHierarchyApi.Controllers
 {
@@ -26,7 +27,7 @@ namespace ProjectHierarchyApi.Controllers
         }
 
         // ✅ Create a new location under a project
-        [HttpPost("add location")]
+        [HttpPost("add-location")]
         public async Task<IActionResult> CreateLocation(Location location)
         {
             await _locationService.CreateLocationAsync(location);
@@ -34,21 +35,31 @@ namespace ProjectHierarchyApi.Controllers
         }
 
         // ✅ Update a location
-        [HttpPut("{id} update location")]
-        public async Task<IActionResult> UpdateLocation(string id, Location updatedLocation)
-        {
-            var success = await _locationService.UpdateLocationAsync(id, updatedLocation);
-            if (!success) return NotFound(new { message = "Location not found" });
-            return Ok(new { message = "Location updated successfully" });
-        }
+        [HttpPut("update-location/{id}")]
+public async Task<IActionResult> UpdateLocation(string id, [FromBody] Location updatedLocation)
+{
+    if (!ObjectId.TryParse(id, out _))
+        return BadRequest(new { message = "Invalid Location ID format." });
+
+    var success = await _locationService.UpdateLocationAsync(id, updatedLocation);
+    if (!success)
+        return NotFound(new { message = "Location not found" });
+
+    return Ok(new { message = "Location updated successfully" });
+}
 
         // ✅ Delete a location
-        [HttpDelete("{id}Delete location")]
-        public async Task<IActionResult> DeleteLocation(string id)
-        {
-            var success = await _locationService.DeleteLocationAsync(id);
-            if (!success) return NotFound(new { message = "Location not found" });
-            return Ok(new { message = "Location deleted successfully" });
-        }
+        [HttpDelete("delete-location/{id}")]
+public async Task<IActionResult> DeleteLocation(string id)
+{
+    if (!ObjectId.TryParse(id, out _))
+        return BadRequest(new { message = "Invalid Location ID format." });
+
+    var success = await _locationService.DeleteLocationAsync(id);
+    if (!success) return NotFound(new { message = "Location not found" });
+
+    return Ok(new { message = "Location deleted successfully" });
+}
+
     }
 }

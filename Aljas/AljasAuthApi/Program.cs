@@ -9,13 +9,12 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using MongoDB.Driver;
 using System.Text;
-//sing StackExchange.Redis;
 using ProjectHierarchyApi.Services;
+using RabbitMQ.Client;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
-// ✅ Load MongoDB Settings (or use default if not found)
+// ✅ Load MongoDB Settings
 var mongoSettings = builder.Configuration.GetSection("MongoDbSettings").Get<MongoDbSettings>() ?? new MongoDbSettings
 {
     ConnectionString = "mongodb://172.16.100.67:27017",
@@ -24,7 +23,7 @@ var mongoSettings = builder.Configuration.GetSection("MongoDbSettings").Get<Mong
     SubcontractorCollectionName = "Subcontractors"
 };
 
-// ✅ Load JWT Settings (or use default if not found)
+// ✅ Load JWT Settings
 var jwtSettings = builder.Configuration.GetSection("JwtSettings").Get<JwtSettings>() ?? new JwtSettings
 {
     SecretKey = "a54bc4a85f99f01f4fa91cd540653bbdd06a4cd325e23e1c228cf46531fbfb24",
@@ -33,11 +32,20 @@ var jwtSettings = builder.Configuration.GetSection("JwtSettings").Get<JwtSetting
     TokenExpirationMinutes = 60
 };
 
-// ✅ Load Redis Settings (or use default if not found)
+// ✅ Load Redis Settings
 var redisSettings = builder.Configuration.GetSection("RedisSettings").Get<RedisSettings>() ?? new RedisSettings
 {
     ConnectionString = "43.204.40.208:6380",
     StreamKey = "user-events"
+};
+
+// ✅ Load RabbitMQ Settings
+var rabbitMQSettings = builder.Configuration.GetSection("RabbitMQSettings").Get<RabbitMQSettings>() ?? new RabbitMQSettings
+{
+    HostName = "43.204.40.208",
+    Port = 5672,
+    UserName = "guest",
+    Password = "guest"
 };
 
 // ✅ Register MongoDB Client and Database
@@ -55,12 +63,20 @@ builder.Services.AddSingleton(sp => mongoDatabase.GetCollection<SubContractor>(m
 builder.Services.AddSingleton(mongoSettings);
 builder.Services.AddSingleton(jwtSettings);
 builder.Services.AddSingleton(redisSettings);
-builder.Services.Configure<RabbitMQSettings>(builder.Configuration.GetSection("RabbitMQSettings"));
+builder.Services.AddSingleton(rabbitMQSettings);
 builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 
-
-// ✅ Register Redis Connection
-//builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(redisSettings.ConnectionString));
+// ✅ Register RabbitMQ Connection
+builder.Services.AddSingleton<IConnectionFactory>(sp =>
+{
+    return new ConnectionFactory()
+    {
+        HostName = rabbitMQSettings.HostName,
+        Port = rabbitMQSettings.Port,
+        UserName = rabbitMQSettings.UserName,
+        Password = rabbitMQSettings.Password
+    };
+});
 
 // ✅ Register Services
 builder.Services.AddSingleton<EmailService>();
@@ -73,16 +89,13 @@ builder.Services.AddSingleton<LocationService>();
 builder.Services.AddSingleton<CanteenService>();
 builder.Services.AddSingleton<UserService>();
 builder.Services.AddSingleton<DeviceService>();
-//builder.Services.AddSingleton<RedisService>();
- // ✅ Added RedisService
-
 builder.Services.AddSingleton<VisitorService>();
 builder.Services.AddSingleton<RabbitMQService>();
 builder.Services.AddSingleton<ExtrasService>();
+builder.Services.AddSingleton<RoleAccessService>();
 builder.Services.AddSingleton<CanteenConfigurationService>();
 
-
-// ✅ Add Controllersbuilder.Services.AddSingleton<VisitorService>()
+// ✅ Add Controllers
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -94,7 +107,7 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-// ✅ Enable CORS (Allow All Origins, Methods, and Headers)
+// ✅ Enable CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAnyOrigin", policy =>
@@ -121,19 +134,23 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
+// ✅ Set up Kestrel for API to listen on port 5221
+builder.WebHost.UseKestrel()
+    .UseUrls("http://0.0.0.0:5221");
+
 var app = builder.Build();
 
 // ✅ Enable Swagger
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Meal Tracking Api's");
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Meal Tracking API");
     c.RoutePrefix = string.Empty;
 });
 
 // ✅ Middleware Setup
 app.UseCors("AllowAnyOrigin");
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 

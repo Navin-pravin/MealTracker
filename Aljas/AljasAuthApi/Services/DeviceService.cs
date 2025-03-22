@@ -27,9 +27,9 @@ namespace ProjectHierarchyApi.Services
 
         public async Task<bool> CreateDeviceAsync(Device device)
         {
-            var project = await _projects.Find(p => p.Id == device.ProjectId).FirstOrDefaultAsync();
-            var location = await _locations.Find(l => l.Id == device.LocationId && l.ProjectId == device.ProjectId).FirstOrDefaultAsync();
-            var canteen = await _canteens.Find(c => c.Id == device.CanteenId && c.LocationId == device.LocationId).FirstOrDefaultAsync();
+            var project = await _projects.Find(p => p.Name == device.ProjectName).FirstOrDefaultAsync();
+            var location = await _locations.Find(l => l.Name == device.LocationName ).FirstOrDefaultAsync();
+            var canteen = await _canteens.Find(c => c.Name == device.CanteenName ).FirstOrDefaultAsync();
 
             if (project == null || location == null || canteen == null)
                 return false;
@@ -52,9 +52,9 @@ namespace ProjectHierarchyApi.Services
             var existingDevice = await GetDeviceByUniqueIdAsync(uniqueId);
             if (existingDevice == null) return false;
 
-            var project = await _projects.Find(p => p.Id == updatedDevice.ProjectId).FirstOrDefaultAsync();
-            var location = await _locations.Find(l => l.Id == updatedDevice.LocationId && l.ProjectId == updatedDevice.ProjectId).FirstOrDefaultAsync();
-            var canteen = await _canteens.Find(c => c.Id == updatedDevice.CanteenId && c.LocationId == updatedDevice.LocationId).FirstOrDefaultAsync();
+            var project = await _projects.Find(p => p.Name == updatedDevice.ProjectName).FirstOrDefaultAsync();
+            var location = await _locations.Find(l => l.Name == updatedDevice.LocationName ).FirstOrDefaultAsync();
+            var canteen = await _canteens.Find(c => c.Name == updatedDevice.CanteenName ).FirstOrDefaultAsync();
 
             if (project == null || location == null || canteen == null)
                 return false;

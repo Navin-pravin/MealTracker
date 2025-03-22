@@ -69,12 +69,16 @@ namespace AljasAuthApi.Services
         public async Task<List<Company>> GetCompanySummaryAsync() => await _companies.Find(_ => true).ToListAsync();
 
         // ✅ Role Service Methods
-        public async Task AddRoleAsync(Role role) => await _roles.InsertOneAsync(role);
-        public async Task<bool> UpdateRoleAsync(string id, Role role) =>
-            (await _roles.ReplaceOneAsync(r => r.Id == id, role)).ModifiedCount > 0;
-        public async Task<bool> DeleteRoleAsync(string id) =>
-            (await _roles.DeleteOneAsync(r => r.Id == id)).DeletedCount > 0;
-        public async Task<List<Role>> GetRoleSummaryAsync() => await _roles.Find(_ => true).ToListAsync();
+        // ✅ Updated Service Methods
+public async Task AddRoleAsync(Role role) => await _roles.InsertOneAsync(role);
+
+public async Task<bool> UpdateRoleAsync(string id, Role role) =>
+    (await _roles.ReplaceOneAsync(r => r.Id == id, role)).ModifiedCount > 0;
+
+public async Task<bool> DeleteRoleAsync(string id) =>
+    (await _roles.DeleteOneAsync(r => r.Id == id)).DeletedCount > 0;
+
+public async Task<List<Role>> GetRoleSummaryAsync() => await _roles.Find(_ => true).ToListAsync();
 
         // ✅ Designation Service Methods
         public async Task AddDesignationAsync(Designation designation) => await _designations.InsertOneAsync(designation);

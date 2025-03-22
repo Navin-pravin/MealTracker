@@ -8,6 +8,6 @@ namespace AljasAuthApi.Models
         public required string ContactNo { get; set; }
         public required string RoleName { get; set; }
         public required string Password { get; set; }
-        public required List<string> AllowedModules { get; set; }
+       //public required List<string> AllowedModules { get; set; }
     }
 }

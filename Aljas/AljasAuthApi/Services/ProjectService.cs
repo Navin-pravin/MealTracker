@@ -3,6 +3,8 @@ using ProjectHierarchyApi.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
+using MongoDB.Bson;
+
 namespace ProjectHierarchyApi.Services
 {
     public class ProjectService
@@ -23,16 +25,28 @@ namespace ProjectHierarchyApi.Services
         public async Task CreateProjectAsync(Project project) =>
             await _projects.InsertOneAsync(project);
 
-        public async Task<bool> UpdateProjectAsync(string id, Project updatedProject)
-        {
-            var result = await _projects.ReplaceOneAsync(p => p.Id == id, updatedProject);
-            return result.ModifiedCount > 0;
-        }
+       public async Task<bool> UpdateProjectAsync(string id, Project updatedProject)
+{
+    if (!ObjectId.TryParse(id, out ObjectId objectId))
+        return false; // Invalid ID format
+
+    var filter = Builders<Project>.Filter.Eq(p => p.Id, id);
+    var result = await _projects.ReplaceOneAsync(filter, updatedProject);
+
+    return result.ModifiedCount > 0;
+}
+
 
         public async Task<bool> DeleteProjectAsync(string id)
-        {
-            var result = await _projects.DeleteOneAsync(p => p.Id == id);
-            return result.DeletedCount > 0;
-        }
+{
+    if (!ObjectId.TryParse(id, out ObjectId objectId))
+        return false; // Invalid ID format
+
+    var filter = Builders<Project>.Filter.Eq(p => p.Id, id);
+    var result = await _projects.DeleteOneAsync(filter);
+
+    return result.DeletedCount > 0;
+}
+
     }
 }

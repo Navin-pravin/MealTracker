@@ -4,16 +4,34 @@ using System.Collections.Generic;
 
 namespace AljasAuthApi.Models
 {
-    public class RoleAccess1
+    public class RoleAccess
     {
         [BsonId]
-        [BsonRepresentation(BsonType.String)]
-        public string Id { get; set; }// = ObjectId.GenerateNewId().ToString();
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; } = ObjectId.GenerateNewId().ToString();
 
-        [BsonElement("RoleName")] // ✅ Matches MongoDB field name
-        public required string RoleName { get; set; } // e.g., "SuperAdmin", "Admin", "User"
+        public string RoleId { get; set; } = string.Empty;
+        public string RoleName { get; set; } = string.Empty;
 
-        [BsonElement("RoleAccess")] // ✅ Ensures consistent naming across collections
-        public required List<string> RoleAccess { get; set; } = new(); // List of modules user can access
+        // ✅ Ensure AllowedModules is defined correctly
+        [BsonElement("AllowedModules")]
+        public AllowedModules AllowedModules { get; set; } = new AllowedModules();
+    }
+
+    public class AllowedModules
+    {
+        public bool Dashboard { get; set; } = false;
+        public bool Events { get; set; } = false;
+
+        [BsonElement("Process&Automation")]
+        public bool ProcessAutomation { get; set; } = false;
+
+        public bool Reports { get; set; } = false;
+        public bool Administration { get; set; } = false;
+    }
+      public class UpdateRoleRequest
+    { //public string RoleId { get; set; } = string.Empty;
+        public string RoleName { get; set; } = string.Empty;
+        public AllowedModules AllowedModules { get; set; } = new AllowedModules();
     }
 }

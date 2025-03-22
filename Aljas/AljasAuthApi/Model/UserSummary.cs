@@ -7,6 +7,6 @@ namespace AljasAuthApi.Models
         public string Email { get; set; }
         public string ContactNo { get; set; }
         public string RoleName { get; set; }
-         public List<string> RoleAccess { get; set; }
+         //public List<string> RoleAccess { get; set; }
     }
 }

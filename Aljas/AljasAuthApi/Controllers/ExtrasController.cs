@@ -16,8 +16,7 @@ namespace AljasAuthApi.Controllers
         {
             _extrasService = extrasService;
         }
-
-        [HttpPost("add-department")]
+         [HttpPost("add-department")]
         public async Task<IActionResult> AddDepartment([FromBody] Department department)
         {
             if (department == null || string.IsNullOrEmpty(department.DepartmentName))
@@ -93,35 +92,36 @@ namespace AljasAuthApi.Controllers
         }
 
         // ✅ Role APIs with Canteen and Meal Access
-        [HttpPost("add-role")]
-        public async Task<IActionResult> AddRole([FromBody] Role role)
-        {
-            await _extrasService.AddRoleAsync(role);
-            return Ok(new { message = "Role added successfully" });
-        }
+        // ✅ Role APIs with Canteen and Meal Access as Boolean Fields
+[HttpPost("add-role")]
+public async Task<IActionResult> AddRole([FromBody] Role role)
+{
+    await _extrasService.AddRoleAsync(role);
+    return Ok(new { message = "Role added successfully" });
+}
 
-        [HttpPut("update-role/{id}")]
-        public async Task<IActionResult> UpdateRole(string id, [FromBody] Role role)
-        {
-            var updated = await _extrasService.UpdateRoleAsync(id, role);
-            if (!updated) return NotFound(new { message = "Role not found" });
-            return Ok(new { message = "Role updated successfully" });
-        }
+[HttpPut("update-role/{id}")]
+public async Task<IActionResult> UpdateRole(string id, [FromBody] Role role)
+{
+    var updated = await _extrasService.UpdateRoleAsync(id, role);
+    if (!updated) return NotFound(new { message = "Role not found" });
+    return Ok(new { message = "Role updated successfully" });
+}
 
-        [HttpDelete("delete-role/{id}")]
-        public async Task<IActionResult> DeleteRole(string id)
-        {
-            var deleted = await _extrasService.DeleteRoleAsync(id);
-            if (!deleted) return NotFound(new { message = "Role not found" });
-            return Ok(new { message = "Role deleted successfully" });
-        }
+[HttpDelete("delete-role/{id}")]
+public async Task<IActionResult> DeleteRole(string id)
+{
+    var deleted = await _extrasService.DeleteRoleAsync(id);
+    if (!deleted) return NotFound(new { message = "Role not found" });
+    return Ok(new { message = "Role deleted successfully" });
+}
 
-        [HttpGet("role-summary")]
-        public async Task<IActionResult> GetRoleSummary()
-        {
-            var roles = await _extrasService.GetRoleSummaryAsync();
-            return Ok(roles);
-        }
+[HttpGet("role-summary")]
+public async Task<IActionResult> GetRoleSummary()
+{
+    var roles = await _extrasService.GetRoleSummaryAsync();
+    return Ok(roles);
+}
 
         // ✅ Designation APIs
         [HttpPost("add-designation")]
