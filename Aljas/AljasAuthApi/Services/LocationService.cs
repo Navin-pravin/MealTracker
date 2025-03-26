@@ -15,8 +15,9 @@ namespace ProjectHierarchyApi.Services
             _locations = database.GetCollection<Location>("Locations");
         }
 
-        public async Task<List<Location>> GetLocationsByProjectIdAsync(string projectId) =>
-            await _locations.Find(l => l.ProjectId == projectId).ToListAsync();
+        public async Task<List<Location>> GetAllLocations() =>
+          //  await _locations.Find(l => l.Id == Id).ToListAsync();
+             await _locations.Find(_ => true).ToListAsync();
 
         public async Task CreateLocationAsync(Location location) =>
             await _locations.InsertOneAsync(location);

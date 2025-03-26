@@ -12,8 +12,6 @@ namespace ProjectHierarchyApi.Models
         [BsonElement("Name")]
         public string Name { get; set; } = string.Empty;
 
-        [BsonRepresentation(BsonType.ObjectId)]
-        [BsonElement("ProjectId")]
-        public string ProjectId { get; set; } = string.Empty;
+     
     }
 }

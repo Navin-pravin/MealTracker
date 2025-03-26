@@ -85,9 +85,9 @@ namespace AljasAuthApi.Services
 
             var validDepartments = (await _extrasService.GetDepartmentSummaryAsync()).ConvertAll(d => d.DepartmentName.ToLower());
             var validCompanies = (await _extrasService.GetCompanySummaryAsync()).ConvertAll(c => c.CompanyName.ToLower());
-            var validRoles = (await _extrasService.GetRoleSummaryAsync()).ConvertAll(r => r.RoleTitle.ToLower());
+           // var validRoles = (await _extrasService.GetRoleSummaryAsync()).ConvertAll(r => r.RoleTitle.ToLower());
             var validDesignations = (await _extrasService.GetDesignationSummaryAsync()).ConvertAll(d => d.DesignationTitle.ToLower());
-            var validLocations = (await _extrasService.GetlocationSummaryAsync()).ConvertAll(l => l.location.ToLower());
+            var validLocations = (await _extrasService.GetLocationSummaryAsync()).ConvertAll(l => l.location.ToLower());
 
             int rowNumber = 2;
 
@@ -116,8 +116,8 @@ namespace AljasAuthApi.Services
                     if (!validCompanies.Contains(employee.Company.ToLower()))
                         fieldErrors["Company"] = $"Invalid Company: {employee.Company}";
                     
-                    if (!validRoles.Contains(employee.Role.ToLower()))
-                        fieldErrors["Role"] = $"Invalid Role: {employee.Role}";
+                    //if (!validRoles.Contains(employee.Role.ToLower()))
+                      //  fieldErrors["Role"] = $"Invalid Role: {employee.Role}";
                     
                     if (!validDesignations.Contains(employee.designation.ToLower()))
                         fieldErrors["Designation"] = $"Invalid Designation: {employee.designation}";

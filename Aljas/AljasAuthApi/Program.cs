@@ -94,6 +94,8 @@ builder.Services.AddSingleton<RabbitMQService>();
 builder.Services.AddSingleton<ExtrasService>();
 builder.Services.AddSingleton<RoleAccessService>();
 builder.Services.AddSingleton<CanteenConfigurationService>();
+builder.Services.AddSingleton<RoleService>();
+
 
 // ✅ Add Controllers
 builder.Services.AddControllers();

@@ -28,25 +28,6 @@ namespace AljasAuthApi.Models
         public required string description{ get; set; }
     }
 
-   public class Role
-{
-    [BsonId]
-    [BsonRepresentation(BsonType.ObjectId)]
-    public required string Id { get; set; }
-
-    public required string RoleTitle { get; set; }
-    public required string Description { get; set; }
-
-    public Dictionary<string, CanteenAccess> CanteenMealAccess { get; set; } = new();
-}
-
-// ✅ Model for Canteen Access
-public class CanteenAccess
-{
-    public bool HasAccess { get; set; } = false;  // True if the role has access to this canteen
-    public Dictionary<string, bool> MealAccess { get; set; } = new(); // Meal access for this canteen
-}
-
     public class Designation
     {
         [BsonId]
@@ -59,10 +40,33 @@ public class CanteenAccess
     public class CLocation
     {
         [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
+        [BsonRepresentation(BsonType.String)]
         public required string Id { get; set; } 
         public required string location { get; set; }
         public required string description { get; set; }
     }
+  public class MealConfiguration
+{
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public required string Id { get; set; }
+
+    [BsonElement("MealType")]
+    public required string MealType { get; set; }
+
+    [BsonElement("StartTime")]
+    [BsonIgnoreIfNull] // Ignore if null
+    public TimeSpan? StartTime { get; set; } // Nullable TimeSpan
+
+    [BsonElement("EndTime")]
+    [BsonIgnoreIfNull] // Ignore if null
+    public TimeSpan? EndTime { get; set; } // Nullable TimeSpan
+
+    [BsonElement("IsActive")]
+    public bool IsActive { get; set; } = true;
+}
+
+
+
 
 }
