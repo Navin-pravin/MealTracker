@@ -9,29 +9,45 @@ namespace ProjectHierarchyApi.Services
     public class LocationService
     {
         private readonly IMongoCollection<Location> _locations;
+           private readonly IMongoCollection<Canteen> _canteens;
+
 
         public LocationService(IMongoDatabase database)
         {
             _locations = database.GetCollection<Location>("Locations");
+               _canteens = database.GetCollection<Canteen>("Canteens");
         }
 
         public async Task<List<Location>> GetAllLocations() =>
           //  await _locations.Find(l => l.Id == Id).ToListAsync();
              await _locations.Find(_ => true).ToListAsync();
 
-        public async Task CreateLocationAsync(Location location) =>
+        public async Task CreateLocaionAsync(Location location) =>
             await _locations.InsertOneAsync(location);
+public async Task<bool> UpdateLocationAsync(string id, Location updatedLocation)
+        {
+            var location = await _locations.Find(l => l.Id == id).FirstOrDefaultAsync();
+            if (location == null) return false;
 
-       public async Task<bool> UpdateLocationAsync(string id, Location updatedLocation)
-{
-    if (!ObjectId.TryParse(id, out ObjectId objectId))
-        return false; // Invalid ID format
+            // Check if the location is being deactivated, if so, check if there are active canteens
+            if (!updatedLocation.Status)
+            {
+                // Find any active canteens associated with the location
+                var activeCanteen = await _canteens.Find(c => c.LocationId == id && c.Status == true).FirstOrDefaultAsync();
+                if (activeCanteen != null)
+                {
+                    // Cannot deactivate location if any of its canteens are still active
+                    return false;
+                }
+            }
 
-    var filter = Builders<Location>.Filter.Eq(l => l.Id, id);
-    var result = await _locations.ReplaceOneAsync(filter, updatedLocation);
+            // If the location is valid and no active canteens, update it
+            var filter = Builders<Location>.Filter.Eq(l => l.Id, id);
+            var result = await _locations.ReplaceOneAsync(filter, updatedLocation);
 
-    return result.ModifiedCount > 0;
-}
+            return result.ModifiedCount > 0;
+        }
+    
 
 
        public async Task<bool> DeleteLocationAsync(string id)

@@ -19,5 +19,9 @@ namespace ProjectHierarchyApi.Models
         [BsonElement("LocationId")]
         [BsonRepresentation(BsonType.ObjectId)] // Ensures compatibility with MongoDB ObjectId
         public string LocationId { get; set; } = string.Empty;
+        public string description{get; set;}=string.Empty;
+
+          [BsonElement("Status")]
+        public bool Status { get; set; } = true; 
     }
 }

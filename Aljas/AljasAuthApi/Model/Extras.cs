@@ -54,6 +54,8 @@ namespace AljasAuthApi.Models
     [BsonElement("MealType")]
     public required string MealType { get; set; }
 
+    public required string description {get; set;}
+
     [BsonElement("StartTime")]
     [BsonIgnoreIfNull] // Ignore if null
     public TimeSpan? StartTime { get; set; } // Nullable TimeSpan

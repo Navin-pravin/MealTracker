@@ -25,47 +25,48 @@ namespace ProjectHierarchyApi.Services
         public async Task<Device?> GetDeviceByUniqueIdAsync(string uniqueId) =>
             await _devices.Find(device => device.UniqueId == uniqueId).FirstOrDefaultAsync();
 
-        public async Task<bool> CreateDeviceAsync(Device device)
-        {
-            var project = await _projects.Find(p => p.Name == device.ProjectName).FirstOrDefaultAsync();
-            var location = await _locations.Find(l => l.Name == device.LocationName ).FirstOrDefaultAsync();
-            var canteen = await _canteens.Find(c => c.Name == device.CanteenName ).FirstOrDefaultAsync();
+       public async Task<bool> CreateDeviceAsync(Device device)
+{
+    var location = await _locations.Find(l => l.Name == device.LocationName).FirstOrDefaultAsync();
+    var canteen = await _canteens.Find(c => c.Name == device.CanteenName).FirstOrDefaultAsync();
 
-            if (project == null || location == null || canteen == null)
-                return false;
+    if (location == null || canteen == null)
+        return false; // Location or Canteen not found
 
-            // Prevent duplicate UniqueId entries
-            var existingDevice = await GetDeviceByUniqueIdAsync(device.UniqueId);
-            if (existingDevice != null)
-                return false; 
+    // Check for duplicate UniqueId
+    var existingDevice = await GetDeviceByUniqueIdAsync(device.UniqueId);
+    if (existingDevice != null)
+        return false;
 
-            device.ProjectName = project.Name;
-            device.LocationName = location.Name;
-            device.CanteenName = canteen.Name;
+    // Store IDs along with names
+    device.LocationId = location.Id;
+    device.LocationName = location.Name;
+    device.CanteenId = canteen.Id;
+    device.CanteenName = canteen.Name;
 
-            await _devices.InsertOneAsync(device);
-            return true;
-        }
+    await _devices.InsertOneAsync(device);
+    return true;
+}
 
-        public async Task<bool> UpdateDeviceByUniqueIdAsync(string uniqueId, Device updatedDevice)
-        {
-            var existingDevice = await GetDeviceByUniqueIdAsync(uniqueId);
-            if (existingDevice == null) return false;
+public async Task<bool> UpdateDeviceByUniqueIdAsync(string uniqueId, Device updatedDevice)
+{
+    var existingDevice = await GetDeviceByUniqueIdAsync(uniqueId);
+    if (existingDevice == null) return false;
 
-            var project = await _projects.Find(p => p.Name == updatedDevice.ProjectName).FirstOrDefaultAsync();
-            var location = await _locations.Find(l => l.Name == updatedDevice.LocationName ).FirstOrDefaultAsync();
-            var canteen = await _canteens.Find(c => c.Name == updatedDevice.CanteenName ).FirstOrDefaultAsync();
+    var location = await _locations.Find(l => l.Name == updatedDevice.LocationName).FirstOrDefaultAsync();
+    var canteen = await _canteens.Find(c => c.Name == updatedDevice.CanteenName).FirstOrDefaultAsync();
 
-            if (project == null || location == null || canteen == null)
-                return false;
+    if (location == null || canteen == null)
+        return false; // Location or Canteen not found
 
-            updatedDevice.ProjectName = project.Name;
-            updatedDevice.LocationName = location.Name;
-            updatedDevice.CanteenName = canteen.Name;
+    updatedDevice.LocationId = location.Id;
+    updatedDevice.LocationName = location.Name;
+    updatedDevice.CanteenId = canteen.Id;
+    updatedDevice.CanteenName = canteen.Name;
 
-            var result = await _devices.ReplaceOneAsync(device => device.UniqueId == uniqueId, updatedDevice);
-            return result.ModifiedCount > 0;
-        }
+    var result = await _devices.ReplaceOneAsync(device => device.UniqueId == uniqueId, updatedDevice);
+    return result.ModifiedCount > 0;
+}
 
         public async Task<bool> DeleteDeviceByUniqueIdAsync(string uniqueId)
         {

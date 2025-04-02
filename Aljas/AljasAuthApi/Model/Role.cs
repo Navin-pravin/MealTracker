@@ -14,5 +14,7 @@ namespace AljasAuthApi.Models
 
         [BsonElement("RoleName")]
         public string RoleName { get; set; } = string.Empty;
+
+        public string Description{get; set;}= string.Empty;
     }
 }
