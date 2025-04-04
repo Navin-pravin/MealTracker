@@ -244,5 +244,55 @@ public async Task<IActionResult> AddMealConfiguration([FromBody] MealConfigurati
             var activeConfigs = await _extrasService.GetActiveMealConfigurationsAsync();
             return Ok(activeConfigs);
         }
+
+
+
+
+         // Location Endpoints
+    [HttpPost("add-subcompany")]
+    public async Task<IActionResult> AddSubCompany([FromBody] subcontractorcompany subcom)
+    {
+        if (subcom == null || string.IsNullOrEmpty(subcom.subcompany))
+            return BadRequest(new { message = "Invalid subcontractor company data." });
+
+        await _extrasService.AddsubcompanyAsync(subcom);
+        return Ok(new { message = "Subcontractor company added successfully." });
+    }
+
+    // 🔹 Update subcontractor company
+    [HttpPut("update-subcompany/{id}")]
+    public async Task<IActionResult> UpdateSubCompany(string id, [FromBody] subcontractorcompany subcom)
+    {
+        if (string.IsNullOrEmpty(id) || subcom == null)
+            return BadRequest(new { message = "Invalid request." });
+
+        var updated = await _extrasService.UpdatesubcompanyAsync(id, subcom);
+        if (!updated)
+            return NotFound(new { message = "Subcontractor company not found." });
+
+        return Ok(new { message = "Subcontractor company updated successfully." });
+    }
+
+    // 🔹 Delete subcontractor company
+    [HttpDelete("delete-subcompany/{id}")]
+    public async Task<IActionResult> DeleteSubCompany(string id)
+    {
+        if (string.IsNullOrEmpty(id))
+            return BadRequest(new { message = "Invalid ID." });
+
+        var deleted = await _extrasService.DeletesubcompanyAsync(id);
+        if (!deleted)
+            return NotFound(new { message = "Subcontractor company not found." });
+
+        return Ok(new { message = "Subcontractor company deleted successfully." });
+    }
+
+    // 🔹 Get subcontractor company summary
+    [HttpGet("subcompany-summary")]
+    public async Task<IActionResult> GetSubCompanySummary()
+    {
+        var subcompanies = await _extrasService.GetsubcompanysummaryAsync();
+        return Ok(subcompanies);
     }
 }
+    }

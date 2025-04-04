@@ -19,18 +19,23 @@ namespace AljasAuthApi.Controllers
 
         // ✅ Create User API (Ensures Role Validation)
         [HttpPost("create")]
-        public async Task<IActionResult> CreateUser([FromBody] CreateUserRequest request)
-        {
-            if (request == null || string.IsNullOrEmpty(request.RoleName))
-                return BadRequest(new { message = "Invalid request. Role name is required." });
+public async Task<IActionResult> CreateUser([FromBody] CreateUserRequest request)
+{
+    if (request == null || string.IsNullOrEmpty(request.RoleName))
+        return BadRequest(new { message = "Invalid request. Role name is required." });
 
-            bool created = await _userService.CreateUserAsync(request);
+    // Check password confirmation
+    if (request.Password != request.ConfirmPassword)
+        return BadRequest(new { message = "Password and Confirm Password do not match." });
 
-            if (!created)
-                return BadRequest(new { message = "Failed to create user. Role does not exist." });
+    bool created = await _userService.CreateUserAsync(request);
 
-            return Ok(new { message = "User created successfully" });
-        }
+    if (!created)
+        return BadRequest(new { message = "Failed to create user. Role does not exist." });
+
+    return Ok(new { message = "User created successfully." });
+}
+
 
         // ✅ Get User Summary API
         [HttpGet("summary")]
@@ -40,21 +45,27 @@ namespace AljasAuthApi.Controllers
             return Ok(users);
         }
 
-        // ✅ Update User API (Ensures Role Validation) with Required Query Parameter
-        [HttpPut("update")]
-        public async Task<IActionResult> UpdateUser([FromQuery] string id, [FromBody] UpdateUserRequest request)
-        {
-            if (string.IsNullOrEmpty(id))
-                return BadRequest(new { message = "User ID is required." });
+    [HttpPut("update")]
+public async Task<IActionResult> UpdateUser([FromQuery] string id, [FromBody] UpdateUserRequest request)
+{
+    if (string.IsNullOrEmpty(id))
+        return BadRequest(new { message = "User ID is required." });
 
-            request.Id = id; // Ensure request object has the correct ID
+    request.Id = id; // Set the ID in the request object
 
-            bool updated = await _userService.UpdateUserAsync(request);
-            if (!updated)
-                return NotFound(new { message = "User not found or role does not exist." });
+    // ✅ Check if passwords match before calling the service
+    if (string.IsNullOrEmpty(request.Password) || string.IsNullOrEmpty(request.ConfirmPassword) || request.Password != request.ConfirmPassword)
+    {
+        return BadRequest(new { message = "Password and Confirm Password must match." });
+    }
 
-            return Ok(new { message = "User updated successfully." });
-        }
+    bool updated = await _userService.UpdateUserAsync(request);
+    if (!updated)
+        return NotFound(new { message = "User not found or role does not exist." });
+
+    return Ok(new { message = "User updated successfully." });
+}
+
 
         // ✅ Delete User API (Super Admin Protection) with Required Query Parameter
         [HttpDelete("delete")]

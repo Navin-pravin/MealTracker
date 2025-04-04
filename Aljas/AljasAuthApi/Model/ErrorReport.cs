@@ -19,7 +19,7 @@ namespace AljasAuthApi.Models
         public string Designation { get; set; }
         public string Company { get; set; }
         public string Location { get; set; }
-        public string Status { get; set; } // "Failed" or "Success"
+        public bool Status { get; set; } // "Failed" or "Success"
 
         [BsonElement("Errors")]
         public List<string> ErrorMessage { get; set; }

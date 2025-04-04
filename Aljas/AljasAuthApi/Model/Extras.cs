@@ -45,6 +45,14 @@ namespace AljasAuthApi.Models
         public required string location { get; set; }
         public required string description { get; set; }
     }
+    public class subcontractorcompany
+    {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public required string Id {get;set;}
+        public required string subcompany {get; set;}
+        public required string description {get; set;}
+    }
   public class MealConfiguration
 {
     [BsonId]

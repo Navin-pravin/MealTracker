@@ -47,53 +47,65 @@ namespace AljasAuthApi.Services
 */
         // ✅ Create User (Ensure Required Fields)
         public async Task<bool> CreateUserAsync(CreateUserRequest request)
-        {
-            // Check if Role exists in RoleAccess collection
-            var roleExists = await _roleAccess.Find(r => r.RoleName == request.RoleName).AnyAsync();
-            if (!roleExists)
-            {
-                return false; // ❌ Role does not exist, return failure
-            }
+{
+    // ✅ Check if Role exists in RoleAccess collection
+    var roleExists = await _roleAccess.Find(r => r.RoleName == request.RoleName).AnyAsync();
+    if (!roleExists)
+    {
+        return false; // ❌ Role does not exist
+    }
 
-            var user = new User
-            {
-                Username = request.Username,
-                Email = request.Email,
-                ContactNo = request.ContactNo,
-                Password = request.Password,
-                RoleName = request.RoleName,
-                CreatedAt = DateTime.UtcNow
-            };
+    // ✅ Check if password and confirm password match
+    if (request.Password != request.ConfirmPassword)
+    {
+        return false; // ❌ Passwords do not match
+    }
 
-            await _users.InsertOneAsync(user);
-            return true;
-        }
+    var user = new User
+    {
+        Username = request.Username,
+        Email = request.Email,
+        ContactNo = request.ContactNo,
+        Password = request.Password,
+        ConfirmPassword = request.ConfirmPassword,
+        RoleName = request.RoleName,
+        CreatedAt = DateTime.UtcNow
+    };
+
+    await _users.InsertOneAsync(user);
+    return true;
+}
+
 
         // ✅ Update User (Ensure Role Exists Before Updating)
-        public async Task<bool> UpdateUserAsync(UpdateUserRequest request)
-        {
-            // Check if Role exists in RoleAccess collection before updating
-            var roleExists = await _roleAccess.Find(r => r.RoleName == request.RoleName).AnyAsync();
-            if (!roleExists)
-            {
-                return false; // ❌ Role does not exist, return failure
-            }
+       public async Task<bool> UpdateUserAsync(UpdateUserRequest request)
+{
+    // ✅ Check if Role exists
+    var roleExists = await _roleAccess.Find(r => r.RoleName == request.RoleName).AnyAsync();
+    if (!roleExists)
+    {
+        return false; // ❌ Role does not exist
+    }
 
-            var update = Builders<User>.Update
-                .Set(u => u.Username, request.Username)
-                .Set(u => u.Email, request.Email)
-                .Set(u => u.ContactNo, request.ContactNo)
-                .Set(u => u.RoleName, request.RoleName)
-                .Set(u => u.CreatedAt, DateTime.UtcNow);
+    // ✅ Ensure Password and ConfirmPassword are not null and match
+    if (string.IsNullOrEmpty(request.Password) || string.IsNullOrEmpty(request.ConfirmPassword) || request.Password != request.ConfirmPassword)
+    {
+        return false; // ❌ Password and ConfirmPassword must match
+    }
 
-            if (!string.IsNullOrEmpty(request.Password))
-            {
-                update = update.Set(u => u.Password, request.Password);
-            }
+    var update = Builders<User>.Update
+        .Set(u => u.Username, request.Username)
+        .Set(u => u.Email, request.Email)
+        .Set(u => u.ContactNo, request.ContactNo)
+        .Set(u => u.RoleName, request.RoleName)
+        .Set(u => u.Password, request.Password)
+        .Set(u => u.ConfirmPassword, request.ConfirmPassword)
+        .Set(u => u.CreatedAt, DateTime.UtcNow);
 
-            var result = await _users.UpdateOneAsync(u => u.Id == request.Id, update);
-            return result.ModifiedCount > 0;
-        }
+    var result = await _users.UpdateOneAsync(u => u.Id == request.Id, update);
+    return result.ModifiedCount > 0;
+}
+
 
         // ✅ Delete User (Prevent Super Admin Deletion)
         public async Task<bool> DeleteUserAsync(string id)

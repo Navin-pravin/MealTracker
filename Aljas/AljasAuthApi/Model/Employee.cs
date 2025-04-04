@@ -6,12 +6,12 @@ namespace AljasAuthApi.Models
     public class Employee
     {
         [BsonId]
-        [BsonRepresentation(BsonType.String)]
-        public required string Id { get; set; } = Guid.NewGuid().ToString();
-
+        [BsonRepresentation(BsonType.ObjectId)]
+        public required string Id { get; set; } = ObjectId.GenerateNewId().ToString();
         public required string IDNumber { get; set; }
         public required string Firstname { get; set; }
         public required string Lastname { get; set; }
+        public required string Email{get;set;}
         public required String StartDate{get; set;}
 
 
@@ -27,7 +27,7 @@ namespace AljasAuthApi.Models
         public required string Referenceid { get; set; }
         public required string CardBadgeNumber { get; set; }
         [BsonElement("status")]
-        public string Status { get; set; } = "Active";
+        public required bool Status { get; set; } = true;
 
 
 

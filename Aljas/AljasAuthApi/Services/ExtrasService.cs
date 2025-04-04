@@ -13,6 +13,8 @@ namespace AljasAuthApi.Services
         private readonly IMongoCollection<Company> _companies;
         private readonly IMongoCollection<Designation> _designations;
         private readonly IMongoCollection<CLocation> _locations;
+
+        private readonly IMongoCollection<subcontractorcompany> _subcompany;
         private readonly IMongoCollection<MealConfiguration> _mealConfigurations;
 
         public ExtrasService(MongoDbSettings dbSettings)
@@ -23,6 +25,8 @@ namespace AljasAuthApi.Services
             _companies = database.GetCollection<Company>("Companies");
             _designations = database.GetCollection<Designation>("Designations");
             _locations = database.GetCollection<CLocation>("clocations");
+                        _subcompany = database.GetCollection<subcontractorcompany>("subcompany");
+
             _mealConfigurations = database.GetCollection<MealConfiguration>("mealconfigurations");
         }
 
@@ -102,5 +106,22 @@ namespace AljasAuthApi.Services
 
         public async Task<List<MealConfiguration>> GetActiveMealConfigurationsAsync() =>
             await _mealConfigurations.Find(m => m.IsActive).ToListAsync();
+// Add
+public async Task AddsubcompanyAsync(subcontractorcompany subcom) =>
+    await _subcompany.InsertOneAsync(subcom);
+
+// Update
+public async Task<bool> UpdatesubcompanyAsync(string id, subcontractorcompany subcom) =>
+    (await _subcompany.ReplaceOneAsync(e => e.Id == id, subcom)).ModifiedCount > 0;
+
+// Delete
+public async Task<bool> DeletesubcompanyAsync(string id) =>
+    (await _subcompany.DeleteOneAsync(d => d.Id == id)).DeletedCount > 0;
+
+// Get Summary
+public async Task<List<subcontractorcompany>> GetsubcompanysummaryAsync() =>
+    await _subcompany.Find(_ => true).ToListAsync();
+
+
     }
 }

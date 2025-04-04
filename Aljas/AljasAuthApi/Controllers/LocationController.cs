@@ -39,21 +39,35 @@ namespace ProjectHierarchyApi.Controllers
         }
 
  // Endpoint to update a location
-        [HttpPut("update-location/{id}")]
-        public async Task<IActionResult> UpdateLocation(string id, [FromBody] Location updatedLocation)
-        {
-            // Check if the Location ID format is valid
-            if (!ObjectId.TryParse(id, out _))
-                return BadRequest(new { message = "Invalid Location ID format." });
+       [HttpPut("update-location/{id}")]
+public async Task<IActionResult> UpdateLocation(string id, [FromBody] Location updatedLocation)
+{
+    // Check if the Location ID format is valid
+    if (!ObjectId.TryParse(id, out _))
+        return BadRequest(new { message = "Invalid Location ID format." });
 
-            // Update the location using the service
-            var success = await _locationService.UpdateLocationAsync(id, updatedLocation);
+    // Retrieve the existing location
+    var existingLocation = await _locationService.GetLocationByIdAsync(id);
+    if (existingLocation == null)
+        return NotFound(new { message = "Location not found." });
 
-            if (!success)
-                return NotFound(new { message = "Location not found or cannot deactivate due to active canteens." });
+    // Check if the location has active canteens before deactivating
+    if (!updatedLocation.Status) // If trying to deactivate
+    {
+        bool hasActiveCanteens = await _locationService.HasActiveCanteens(id);
+        if (hasActiveCanteens)
+            return BadRequest(new { message = "Cannot deactivate location due to active canteens." });
+    }
 
-            return Ok(new { message = "Location updated successfully" });
-        }
+    // Update the location using the service
+    var success = await _locationService.UpdateLocationAsync(id, updatedLocation);
+
+    if (!success)
+        return BadRequest(new { message = "Failed to update location." });
+
+    return Ok(new { message = "Location updated successfully" });
+}
+
         // ✅ Delete a location
        [HttpDelete("delete-location/{id}")]
 public async Task<IActionResult> DeleteLocation(string id)

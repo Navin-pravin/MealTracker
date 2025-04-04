@@ -96,6 +96,8 @@ builder.Services.AddSingleton<RoleAccessService>();
 builder.Services.AddSingleton<CanteenConfigurationService>();
 builder.Services.AddSingleton<RoleService>();
 builder.Services.AddSingleton<EmployeeReportService>();
+builder.Services.AddSingleton<CouponService>();
+builder.Services.AddSingleton<RoleHierarchyService>();
 
 // ✅ Add Controllers
 builder.Services.AddControllers();

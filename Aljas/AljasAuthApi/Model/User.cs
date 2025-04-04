@@ -21,6 +21,7 @@ namespace AljasAuthApi.Models
 
         [BsonElement("Password")]
         public required string Password { get; set; }
+        public required string ConfirmPassword {get; set;}
 
         [BsonElement("RoleName")] // ✅ Ensures consistency across user & role
         public required string RoleName { get; set; } // e.g., "SuperAdmin", "Admin", "User"

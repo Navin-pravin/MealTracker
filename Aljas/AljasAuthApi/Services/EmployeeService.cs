@@ -50,7 +50,7 @@ namespace AljasAuthApi.Services
                 return false;
             }
 
-            employee.Id = Guid.NewGuid().ToString();
+            employee.Id = ObjectId.GenerateNewId().ToString();
             try
             {
                 await _employees.InsertOneAsync(employee);

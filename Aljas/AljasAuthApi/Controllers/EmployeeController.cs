@@ -47,7 +47,7 @@ public async Task<IActionResult> GetAllEmployees([FromQuery] string? clientid)
         return NotFound(new { message = "Employee not found" });
 
     // ✅ Restrict access if employee status is "Inactive"
-    if (employee.Status.ToLower() == "inactive")
+    if (employee.Status == true)
         return BadRequest(new { message = "Access denied. Employee is inactive." });
 
     return Ok(employee);
@@ -130,18 +130,20 @@ public async Task<IActionResult> UploadEmployeesFromExcel(IFormFile file)
                             IDNumber = worksheet.Cells[row, 1]?.Text?.Trim() ?? "",
                             Firstname = worksheet.Cells[row, 2]?.Text?.Trim() ?? "",
                             Lastname = worksheet.Cells[row, 3]?.Text?.Trim() ?? "",
-                            StartDate = worksheet.Cells[row, 4]?.Text?.Trim() ?? "",
-                            EndDate = worksheet.Cells[row, 5]?.Text?.Trim() ?? "",
-                            Phone_no = worksheet.Cells[row, 6]?.Text?.Trim() ?? "",
-                            Dept = worksheet.Cells[row, 7]?.Text?.Trim() ?? "",
-                            Role = worksheet.Cells[row, 8]?.Text?.Trim() ?? "",
-                            designation = worksheet.Cells[row, 9]?.Text?.Trim() ?? "",
-                            imageUrl = worksheet.Cells[row, 10]?.Text?.Trim() ?? "",
-                            Company = worksheet.Cells[row, 11]?.Text?.Trim() ?? "",
-                            location = worksheet.Cells[row, 12]?.Text?.Trim() ?? "",
-                            Referenceid = worksheet.Cells[row, 13]?.Text?.Trim() ?? "",
-                            CardBadgeNumber = worksheet.Cells[row, 14]?.Text?.Trim() ?? "",
-                            Status = worksheet.Cells[row, 15]?.Text?.Trim() ?? "Inactive"
+                            Email=worksheet.Cells[row,4]?.Text?.Trim() ??"",
+                            StartDate = worksheet.Cells[row, 5]?.Text?.Trim() ?? "",
+                            EndDate = worksheet.Cells[row, 6]?.Text?.Trim() ?? "",
+                            Phone_no = worksheet.Cells[row, 7]?.Text?.Trim() ?? "",
+                            Dept = worksheet.Cells[row, 8]?.Text?.Trim() ?? "",
+                            Role = worksheet.Cells[row, 9]?.Text?.Trim() ?? "",
+                            designation = worksheet.Cells[row, 10]?.Text?.Trim() ?? "",
+                            imageUrl = worksheet.Cells[row, 11]?.Text?.Trim() ?? "",
+                            Company = worksheet.Cells[row, 12]?.Text?.Trim() ?? "",
+                            location = worksheet.Cells[row, 13]?.Text?.Trim() ?? "",
+                            Referenceid = worksheet.Cells[row, 14]?.Text?.Trim() ?? "",
+                            CardBadgeNumber = worksheet.Cells[row, 15]?.Text?.Trim() ?? "",
+                           Status = bool.TryParse(worksheet.Cells[row, 16]?.Text?.Trim(), out bool result) ? result : true
+
                         };
 
                         employees.Add(employee);

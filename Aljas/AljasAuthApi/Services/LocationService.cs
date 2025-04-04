@@ -60,6 +60,15 @@ public async Task<bool> UpdateLocationAsync(string id, Location updatedLocation)
 
     return result.DeletedCount > 0;
 }
+public async Task<bool> HasActiveCanteens(string locationId)
+{
+    var activeCanteens = await _canteens.Find(c => c.LocationId == locationId && c.Status).AnyAsync();
+    return activeCanteens;
+}
+public async Task<Location?> GetLocationByIdAsync(string id)
+{
+    return await _locations.Find(loc => loc.Id == id).FirstOrDefaultAsync();
+}
 
     }
 }

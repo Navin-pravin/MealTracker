@@ -12,6 +12,8 @@ namespace ProjectHierarchyApi.Models
         [BsonElement("Name")]
         public string Name { get; set; } = string.Empty;
 
+        public string description{get; set;}=string.Empty;
+
         [BsonElement("Status")]
         public bool Status { get; set; } = true; 
 
