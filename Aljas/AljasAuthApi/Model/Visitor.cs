@@ -16,5 +16,6 @@ namespace AljasAuthApi.Models
         public required DateTime EndDate { get; set; }
         public required string VisitorCompany { get; set; }
         public required string ContactNo { get; set; }
+        public required string remarks {get;set;}
     }
 }

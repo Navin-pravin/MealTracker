@@ -18,22 +18,38 @@ namespace ProjectHierarchyApi.Controllers
         {
             _couponService = couponService;
         }
-
-        [HttpPost("generate")]
+ [HttpPost("generate-coupons")]
         public async Task<IActionResult> GenerateCoupons([FromBody] Coupon request, [FromQuery] int count)
         {
-            if (await _couponService.GenerateCouponsAsync(request.CouponCode, count, request.StartDate, request.EndDate, request.Description))
-            {
-                return Ok("Coupons generated successfully.");
-            }
-            return BadRequest("Failed to generate coupons.");
+            if (count <= 0)
+                return BadRequest(new { message = "Count must be greater than 0" });
+
+            bool result = await _couponService.GenerateCouponsAsync(
+                request.CouponCode,     // Just used as a placeholder, actual code is generated
+                count,
+                request.StartDate,
+                request.EndDate,
+                request.Description
+            );
+
+            if (!result)
+                return BadRequest(new { message = "Failed to generate coupons" });
+
+            return Ok(new { message = "Coupons generated successfully" });
         }
+
 
         [HttpGet]
         public async Task<ActionResult<List<Coupon>>> GetCoupons()
         {
             return Ok(await _couponService.GetCouponsAsync());
         }
+[HttpGet("active-coupons")]
+public async Task<IActionResult> GetActiveCoupons()
+{
+    var activeCoupons = await _couponService.GetActiveCouponsAsync();
+    return Ok(activeCoupons);
+}
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Coupon>> GetCouponById(string id)

@@ -89,7 +89,8 @@ namespace AljasAuthApi.Services
                         StartDate = startDate,
                         EndDate = endDate,
                         VisitorCompany = worksheet.Cells[row, 5].Text,
-                        ContactNo = worksheet.Cells[row, 6].Text
+                        ContactNo = worksheet.Cells[row, 6].Text,
+                        remarks=worksheet.Cells[row,7].Text
                     };
 
                     visitors.Add(visitor);
@@ -135,6 +136,7 @@ namespace AljasAuthApi.Services
             worksheet.Cells[1, 4].Value = "EndDate";
             worksheet.Cells[1, 5].Value = "VisitorCompany";
             worksheet.Cells[1, 6].Value = "ContactNo";
+            worksheet.Cells[1, 6].Value = "remarks";
 
             return package.GetAsByteArray();
         }
