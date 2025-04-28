@@ -113,5 +113,31 @@ public async Task<IActionResult> UpdateUser([FromQuery] string id, [FromBody] Up
 
             return Ok(user);
         }
+        [HttpPut("change-password")]
+public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordRequest request)
+{
+    if (string.IsNullOrEmpty(request.UserId) ||
+        string.IsNullOrEmpty(request.CurrentPassword) ||
+        string.IsNullOrEmpty(request.NewPassword) ||
+        string.IsNullOrEmpty(request.ConfirmNewPassword))
+    {
+        return BadRequest(new { message = "All fields are required." });
+    }
+
+    if (request.NewPassword != request.ConfirmNewPassword)
+    {
+        return BadRequest(new { message = "New password and Confirm new password do not match." });
+    }
+
+    bool result = await _userService.ChangePasswordAsync(request);
+
+    if (!result)
+    {
+        return BadRequest(new { message = "Invalid current password or failed to update password." });
+    }
+
+    return Ok(new { message = "Password changed successfully." });
+}
+
     }
 }

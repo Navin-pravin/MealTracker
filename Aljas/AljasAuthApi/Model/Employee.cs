@@ -6,7 +6,7 @@ namespace AljasAuthApi.Models
     public class Employee
     {
         [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
+        //[BsonRepresentation(BsonType.ObjectId)]
         public required string Id { get; set; } = ObjectId.GenerateNewId().ToString();
         public required string IDNumber { get; set; }
         public required string Firstname { get; set; }

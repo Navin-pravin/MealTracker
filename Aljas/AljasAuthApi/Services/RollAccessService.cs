@@ -59,5 +59,23 @@ namespace AljasAuthApi.Services
             role.RoleId = await GenerateUniqueRoleIdAsync(); // Assign unique 3-digit RoleId
             await _roles.InsertOneAsync(role);
         }
+        public async Task<UserAccessResponse?> GetUserAccessByUsernameAsync(string Email)
+{
+    var user = await _users.Find(u => u.Email == Email).FirstOrDefaultAsync();
+    if (user == null) return null;
+
+    var roleAccess = await _roles.Find(r => r.RoleName == user.RoleName).FirstOrDefaultAsync();
+    if (roleAccess == null) return null;
+
+    return new UserAccessResponse
+    {
+        Id = user.Id,
+        Username = user.Email,
+        RoleName = user.RoleName,
+        RoleId=roleAccess.RoleId,
+        AllowedModules = roleAccess.AllowedModules
+    };
+}
+
     }
 }

@@ -88,9 +88,10 @@ namespace AljasAuthApi.Services
                         Email = worksheet.Cells[row, 2].Text,
                         StartDate = startDate,
                         EndDate = endDate,
-                        VisitorCompany = worksheet.Cells[row, 5].Text,
-                        ContactNo = worksheet.Cells[row, 6].Text,
-                        remarks=worksheet.Cells[row,7].Text
+                        Role=worksheet.Cells[row, 5].Text,
+                        VisitorCompany = worksheet.Cells[row, 6].Text,
+                        ContactNo = worksheet.Cells[row, 7].Text,
+                        Remarks=worksheet.Cells[row,8].Text
                     };
 
                     visitors.Add(visitor);

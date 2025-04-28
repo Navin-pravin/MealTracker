@@ -15,6 +15,8 @@ namespace ProjectHierarchyApi.Models
        //public string SerialCode { get; set; } = string.Empty;
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
+        public string SerialCode { get; set; } = string.Empty;
+
         public string Description { get; set; } = string.Empty;
         public bool Status { get; set; } = true;
         
@@ -24,8 +26,10 @@ namespace ProjectHierarchyApi.Models
         public string Redeemedcanteen {get;set;}
         
         public string Modifiedby {get;set;}
-        public bool Redeemstatus {get;set;}= true;
+        public bool Redeemstatus {get;set;}
         public string Assignedto {get;set;}
+                public string AssignedEmployee {get;set;}
+
 
         public DateTime Assignedat {get;set;}
 

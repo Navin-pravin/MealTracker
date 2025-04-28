@@ -124,5 +124,26 @@ namespace AljasAuthApi.Services
         {
             return await _users.Find(u => u.Id == id).FirstOrDefaultAsync();
         }
+        public async Task<bool> ChangePasswordAsync(ChangePasswordRequest request)
+{
+    var user = await _users.Find(u => u.Id == request.UserId).FirstOrDefaultAsync();
+    if (user == null || user.Password != request.CurrentPassword)
+    {
+        return false; // ❌ User not found or current password is incorrect
+    }
+
+    if (request.NewPassword != request.ConfirmNewPassword)
+    {
+        return false; // ❌ New password and confirm password do not match
+    }
+
+    var update = Builders<User>.Update
+        .Set(u => u.Password, request.NewPassword)
+        .Set(u => u.ConfirmPassword, request.ConfirmNewPassword);
+
+    var result = await _users.UpdateOneAsync(u => u.Id == request.UserId, update);
+    return result.ModifiedCount > 0;
+}
+
     }
 }

@@ -80,7 +80,7 @@ public async Task<IActionResult> DeleteLocation(string id)
     var canteens = await _canteens.Find(c => c.LocationId == id).ToListAsync();
     if (canteens.Count > 0)
     {
-        return BadRequest(new { message = "Cannot delete location because it has associated canteens." });
+        return BadRequest(new { message = "Cannot delete location because it has associated canteens or it is integrated with the role hierarchy." });
     }
 
     // Proceed with deletion if no canteens are associated

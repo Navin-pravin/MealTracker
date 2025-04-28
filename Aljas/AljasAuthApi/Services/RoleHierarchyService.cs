@@ -10,6 +10,7 @@ namespace AljasAuthApi.Services
     {
         private readonly IMongoCollection<RoleHierarchy> _roleHierarchy;
         private readonly IMongoCollection<Role> _roles;
+        //public readonly EmployeeService _employeeservice;
 
         public RoleHierarchyService(MongoDbSettings dbSettings)
         {
@@ -17,6 +18,7 @@ namespace AljasAuthApi.Services
             var database = client.GetDatabase(dbSettings.DatabaseName);
             _roleHierarchy = database.GetCollection<RoleHierarchy>("RoleHierarchy");
             _roles = database.GetCollection<Role>("Role1");
+            //_employeeservice=employeeService;
         }
 
         private async Task<string> GenerateRoleIdAsync()
@@ -76,6 +78,23 @@ namespace AljasAuthApi.Services
             }
             return false;
         }
+public async Task<List<string>> GetRoleNamesByCanteenIdAsync(string canteenId)
+{
+    var filter = Builders<RoleHierarchy>.Filter.ElemMatch(
+        r => r.Locations, loc =>
+            loc.Canteens.Any(c => c.CanteenId == canteenId)
+    );
+
+    var roles = await _roleHierarchy.Find(_ => true).ToListAsync();
+
+    var matchedRoles = roles.Where(role =>
+        role.Locations.Any(loc =>
+            loc.Canteens.Any(c => c.CanteenId == canteenId)
+        )
+    ).Select(r => r.RoleName).Distinct().ToList();
+
+    return matchedRoles;
+}
 
         public async Task<bool> DeleteRoleAsync(string roleId)
         {

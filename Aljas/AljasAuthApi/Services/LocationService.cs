@@ -3,6 +3,8 @@ using ProjectHierarchyApi.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using MongoDB.Bson;
+using DnsClient.Protocol;
+using AljasAuthApi.Models;
 
 namespace ProjectHierarchyApi.Services
 {
@@ -10,12 +12,15 @@ namespace ProjectHierarchyApi.Services
     {
         private readonly IMongoCollection<Location> _locations;
            private readonly IMongoCollection<Canteen> _canteens;
+           private readonly IMongoCollection<RoleHierarchy> _roleHierarchy;
+
 
 
         public LocationService(IMongoDatabase database)
         {
             _locations = database.GetCollection<Location>("Locations");
                _canteens = database.GetCollection<Canteen>("Canteens");
+               _roleHierarchy=database.GetCollection<RoleHierarchy>("RoleHierarchy");
         }
 
         public async Task<List<Location>> GetAllLocations() =>
@@ -50,16 +55,25 @@ public async Task<bool> UpdateLocationAsync(string id, Location updatedLocation)
     
 
 
-       public async Task<bool> DeleteLocationAsync(string id)
+     public async Task<bool> DeleteLocationAsync(string id)
 {
     if (!ObjectId.TryParse(id, out ObjectId objectId))
         return false; // Invalid ID format
+
+    // Check if the location is used in any RoleHierarchy
+    var isReferenced = await _roleHierarchy.Find(r =>
+        r.Locations.Any(l => l.LocationId == id)
+    ).AnyAsync();
+
+    if (isReferenced)
+        return false; // Cannot delete, location is still linked in RoleHierarchy
 
     var filter = Builders<Location>.Filter.Eq(l => l.Id, id);
     var result = await _locations.DeleteOneAsync(filter);
 
     return result.DeletedCount > 0;
 }
+
 public async Task<bool> HasActiveCanteens(string locationId)
 {
     var activeCanteens = await _canteens.Find(c => c.LocationId == locationId && c.Status).AnyAsync();

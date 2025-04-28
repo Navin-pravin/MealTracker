@@ -18,7 +18,7 @@ namespace AljasAuthApi.Services
         {
             var client = new MongoClient(settings.ConnectionString);
             var database = client.GetDatabase(settings.DatabaseName);
-            _bulkSubContractors = database.GetCollection<SubContractor>("Sub-contractors-bulk");
+            _bulkSubContractors = database.GetCollection<SubContractor>("SubContractors");
         }
 
         public async Task<List<SubContractor>> GetAllSubContractorsAsync(string? name = null, string? company = null)

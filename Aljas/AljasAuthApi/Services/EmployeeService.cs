@@ -12,15 +12,19 @@ namespace AljasAuthApi.Services
     {
         private readonly IMongoCollection<Employee> _employees;
         private readonly IMongoCollection<EmployeeUploadError> _employeeUploadErrors;
+
+          private readonly RoleHierarchyService _roleHierarchyService;
+
         private readonly ExtrasService _extrasService;
 
-        public EmployeeService(MongoDbSettings settings, ExtrasService extrasService)
+        public EmployeeService(MongoDbSettings settings, ExtrasService extrasService, RoleHierarchyService rolehierarchy)
         {
             var client = new MongoClient(settings.ConnectionString);
             var database = client.GetDatabase(settings.DatabaseName);
             _employees = database.GetCollection<Employee>(settings.EmployeesCollectionName);
             _employeeUploadErrors = database.GetCollection<EmployeeUploadError>("EmployeeUploadErrors");
             _extrasService = extrasService;
+            _roleHierarchyService = rolehierarchy;
         }
 
         public async Task<List<Employee>> GetAllEmployeesAsync(string? Firstname = null, string? Dept = null)
@@ -38,6 +42,11 @@ namespace AljasAuthApi.Services
 
         public async Task<Employee?> GetEmployeeByIdAsync(string id) =>
             await _employees.Find(emp => emp.Id == id).FirstOrDefaultAsync();
+public async Task<List<Employee>?> GetEmployeeByDeptAsync(string dept)
+{
+    // Find all employees in the department
+    return await _employees.Find(emp => emp.Dept == dept).ToListAsync();
+}
 
         public async Task<bool> CreateEmployeeAsync(Employee employee)
         {
@@ -161,5 +170,14 @@ namespace AljasAuthApi.Services
         {
             return await _employeeUploadErrors.Find(_ => true).ToListAsync();
         }
+     public async Task<List<Employee>> GetEmployeesByCanteenIdAsync(string canteenId)
+{
+    var roleNames = await _roleHierarchyService.GetRoleNamesByCanteenIdAsync(canteenId);
+
+    var filter = Builders<Employee>.Filter.In(e => e.Role, roleNames);
+    return await _employees.Find(filter).ToListAsync();
+}
+
+
     }
 }

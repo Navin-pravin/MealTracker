@@ -42,5 +42,15 @@ namespace AljasAuthApi.Controllers
             await _roleAccessService.CreateRoleAsync(role);
             return Ok(new { message = "Role created successfully." });
         }
+        [HttpGet("user-access/{Email}")]
+public async Task<IActionResult> GetUserAccessByUsername(string Email)
+{
+    var userAccess = await _roleAccessService.GetUserAccessByUsernameAsync(Email);
+    if (userAccess == null)
+        return NotFound(new { message = "User or role not found." });
+
+    return Ok(userAccess);
+}
+
     }
 }

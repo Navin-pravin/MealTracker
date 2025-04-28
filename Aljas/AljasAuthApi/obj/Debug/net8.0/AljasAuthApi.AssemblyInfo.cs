@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AljasAuthApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49b1d9e05e0b12bfef23ffc28bf5c64f016f6470")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5776105daba58357739d20eedacd0d4830bae2af")]
 [assembly: System.Reflection.AssemblyProductAttribute("AljasAuthApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AljasAuthApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

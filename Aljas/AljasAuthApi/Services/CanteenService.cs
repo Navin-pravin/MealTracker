@@ -1,3 +1,5 @@
+using AljasAuthApi.Models;
+using DnsClient.Protocol;
 using MongoDB.Driver;
 using ProjectHierarchyApi.Models;
 using System.Collections.Generic;
@@ -9,15 +11,22 @@ namespace ProjectHierarchyApi.Services
     {
       private readonly IMongoCollection<Canteen> _canteens;
 private readonly IMongoCollection<Device> _devices; // Ensure you have this
-private readonly IMongoCollection<Location> _locations; // Ensure you have this
 
+private readonly IMongoCollection<Location> _locations; 
+
+private readonly IMongoCollection<RoleHierarchy> _roleHierarchy; 
 public CanteenService(IMongoDatabase database)
 {
     _canteens = database.GetCollection<Canteen>("Canteens");
     _devices = database.GetCollection<Device>("Devices");  // ✅ Correcting Device Collection
-    _locations = database.GetCollection<Location>("Locations"); // ✅ Correcting Location Collection
+    _locations = database.GetCollection<Location>("Locations");
+    _roleHierarchy = database.GetCollection<RoleHierarchy>("RoleHierarchy"); // ✅ Correcting Location Collection
 }
 
+public async Task<List<Canteen>> GetAllCanteensAsync()
+{
+    return await _canteens.Find(_ => true).ToListAsync();
+}
 
         // Get Canteens by Location ID
         public async Task<List<Canteen>> GetCanteensByLocationIdAsync(string locationId) =>
@@ -74,17 +83,28 @@ public CanteenService(IMongoDatabase database)
 }
 
         // Delete a Canteen
-     public async Task<bool> DeleteCanteenAsync(string id)
+   public async Task<bool> DeleteCanteenAsync(string id)
 {
     // Check if any devices are linked to the canteen
     var deviceExists = await _devices.Find(d => d.CanteenId == id).AnyAsync();
     if (deviceExists)
         return false; // Cannot delete as devices are linked to this canteen
 
-    // Proceed with deletion if no devices are linked
+    // Check if the canteen is referenced in RoleHierarchy
+    var isReferencedInRole = await _roleHierarchy.Find(r =>
+        r.Locations.Any(loc =>
+            loc.Canteens.Any(c => c.CanteenId == id)
+        )
+    ).AnyAsync();
+
+    if (isReferencedInRole)
+        return false; // Cannot delete, canteen is linked to RoleHierarchy
+
+    // Proceed with deletion if no device or role references
     var result = await _canteens.DeleteOneAsync(c => c.Id == id);
     return result.DeletedCount > 0;
 }
+
 
 
         // Get Canteen by ID

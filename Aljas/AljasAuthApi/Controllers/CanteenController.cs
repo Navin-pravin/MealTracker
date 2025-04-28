@@ -13,13 +13,16 @@ namespace ProjectHierarchyApi.Controllers
      public class CanteenController : ControllerBase
     {
         private readonly CanteenService _canteenService;
-        private readonly IMongoCollection<Location> _locations; // Add the Locations collection here
+        
+         private readonly IMongoCollection<Location> _locations;
+         private readonly IMongoCollection<Canteen> _canteens;// Add the Locations collection here
 
         // Inject the dependencies in the constructor
         public CanteenController(CanteenService canteenService, IMongoDatabase database)
         {
             _canteenService = canteenService;
-            _locations = database.GetCollection<Location>("Locations"); // Initialize _locations collection
+            _locations = database.GetCollection<Location>("Locations");
+            _canteens=database.GetCollection<Canteen>("Canteens");
         }
         // ✅ Get all canteens for a given project and location
         [HttpGet("canteen-summary")]
@@ -28,7 +31,13 @@ namespace ProjectHierarchyApi.Controllers
             var canteens = await _canteenService.GetCanteensByLocationIdAsync(locationId);
             return Ok(canteens);
         }
-
+      
+ [HttpGet("all")]
+        public async Task<ActionResult<List<Canteen>>> GetAllCanteens()
+        {
+            var canteens = await _canteenService.GetAllCanteensAsync();
+            return Ok(canteens);
+        }
         // ✅ Create a new canteen under a project and location
         
         [HttpPost("add-canteen")]
@@ -72,7 +81,7 @@ public async Task<IActionResult> DeleteCanteen(string id)
 
     var success = await _canteenService.DeleteCanteenAsync(id);
     if (!success) 
-        return BadRequest(new { message = "Canteen cannot be deleted as it has linked devices." });
+        return BadRequest(new { message = "Canteen cannot be deleted as it has linked devices or it is associated with the RoleHierarchy." });
 
     return Ok(new { message = "Canteen deleted successfully" });
 }

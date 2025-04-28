@@ -6,16 +6,17 @@ namespace AljasAuthApi.Models
     public class SubContractor
     {
         [BsonId]
-        [BsonRepresentation(BsonType.String)]
-        public string Id { get; set; } = string.Empty;
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
 
-        [BsonElement("contractor_name")]
+        // Correct BsonElement mappings to match the MongoDB collection fields
+        [BsonElement("contractorname")]
         public string ContractorName { get; set; } = string.Empty;
 
         [BsonElement("contractor_id")]
         public string ContractorId { get; set; } = string.Empty;
 
-        [BsonElement("companyName")]
+        [BsonElement("companyname")]
         public string CompanyName { get; set; } = string.Empty;
 
         [BsonElement("project_name")]
@@ -38,5 +39,8 @@ namespace AljasAuthApi.Models
 
         [BsonElement("contractor_image")]
         public string ImageUrl { get; set; } = string.Empty;
+
+        [BsonElement("role")]
+        public string Role { get; set; } = string.Empty;
     }
 }

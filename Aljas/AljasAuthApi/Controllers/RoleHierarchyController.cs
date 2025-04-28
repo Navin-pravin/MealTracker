@@ -50,5 +50,12 @@ namespace AljasAuthApi.Controllers
             var result = await _roleHierarchyService.DeleteRoleAsync(roleId);
             return result ? Ok(new { message = "Role deleted successfully" }) : NotFound("Role not found");
         }
+        [HttpGet("roles-by-canteen/{canteenId}")]
+public async Task<IActionResult> GetRolesByCanteenId(string canteenId)
+{
+    var roleNames = await _roleHierarchyService.GetRoleNamesByCanteenIdAsync(canteenId);
+    return Ok(roleNames);
+}
+
     }
 }

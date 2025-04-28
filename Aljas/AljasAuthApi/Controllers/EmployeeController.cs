@@ -15,10 +15,12 @@ namespace AljasAuthApi.Controllers
     public class EmployeeController : ControllerBase
     {
         private readonly EmployeeService _employeeService;
+        private readonly RoleHierarchyService _roleHierarchyService;
 
-        public EmployeeController(EmployeeService employeeService)
+        public EmployeeController(EmployeeService employeeService ,RoleHierarchyService rolehierarchy)
         {
             _employeeService = employeeService;
+            _roleHierarchyService=rolehierarchy;
         }
 
        [HttpGet("Employee-Summary")]
@@ -49,6 +51,19 @@ public async Task<IActionResult> GetAllEmployees([FromQuery] string? clientid)
     // ✅ Restrict access if employee status is "Inactive"
     if (employee.Status == true)
         return BadRequest(new { message = "Access denied. Employee is inactive." });
+
+    return Ok(employee);
+}
+ [HttpGet("department/{dept}")]
+        public async Task<IActionResult> GetEmployeeByDept(string dept)
+        {
+    var employee = await _employeeService.GetEmployeeByDeptAsync(dept);
+ if (employee== null || !employee.Any())
+        return NotFound(new { message = "No employees found for the specified department." });
+
+    // ✅ Restrict access if employee status is "Inactive"
+  //  if (employee.Status == true)
+    //    return BadRequest(new { message = "Access denied. Employee is inactive." });
 
     return Ok(employee);
 }
@@ -222,5 +237,14 @@ public async Task<IActionResult> DownloadErrorReport()
 
     return File(stream, contentType, fileName);
 }
+[HttpGet("by-canteen-role/{canteenId}")]
+public async Task<IActionResult> GetEmployeesByCanteenRole(string canteenId)
+{
+    var employees = await _employeeService.GetEmployeesByCanteenIdAsync(canteenId);
+    return Ok(employees);
+}
+
+
+
 
     }}

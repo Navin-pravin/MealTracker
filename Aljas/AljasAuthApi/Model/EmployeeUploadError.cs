@@ -8,7 +8,7 @@ namespace AljasAuthApi.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; } = ObjectId.GenerateNewId().ToString();
+        public string Id { get; set; }
 
         public int RowNumber { get; set; }
 

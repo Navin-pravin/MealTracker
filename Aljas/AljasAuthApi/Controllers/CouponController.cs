@@ -5,6 +5,8 @@ using ProjectHierarchyApi.Services;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using MongoDB.Bson;
+
 
 namespace ProjectHierarchyApi.Controllers
 {
@@ -44,6 +46,13 @@ namespace ProjectHierarchyApi.Controllers
         {
             return Ok(await _couponService.GetCouponsAsync());
         }
+        [HttpGet("next-coupon-code")]
+public async Task<IActionResult> GetNextCouponCode()
+{
+    var nextCode = await _couponService.GetNextCouponCodeAsync();
+    return Ok(new { NextCouponCode = nextCode });
+}
+
 [HttpGet("active-coupons")]
 public async Task<IActionResult> GetActiveCoupons()
 {
@@ -78,5 +87,17 @@ public async Task<IActionResult> GetActiveCoupons()
             }
             return BadRequest("Failed to delete coupon.");
         }
+      [HttpPost("assign-multiple")]
+public async Task<IActionResult> AssignMultipleCoupons([FromBody] List<CouponAssignRequest> requests)
+{
+    var failedCoupons = await _couponService.AssignMultipleCouponsAsync(requests);
+
+    if (failedCoupons.Count == 0)
+        return Ok("All coupons assigned successfully.");
+    else
+        return BadRequest($"Failed to assign the following coupon IDs: {string.Join(", ", failedCoupons)}");
+}
+
+
     }
 }

@@ -40,7 +40,7 @@ namespace AljasAuthApi.Models
     public class CLocation
     {
         [BsonId]
-        [BsonRepresentation(BsonType.String)]
+        [BsonRepresentation(BsonType.ObjectId)]
         public required string Id { get; set; } 
         public required string location { get; set; }
         public required string description { get; set; }
