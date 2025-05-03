@@ -11,7 +11,10 @@ using MongoDB.Driver;
 using System.Text;
 using ProjectHierarchyApi.Services;
 using RabbitMQ.Client;
+using System.Net.WebSockets;
+using System.Threading.Tasks;
 
+// ✅ Create Builder
 var builder = WebApplication.CreateBuilder(args);
 
 // ✅ Load MongoDB Settings
@@ -101,6 +104,8 @@ builder.Services.AddSingleton<RoleHierarchyService>();
 builder.Services.AddSingleton<DashboardService>();
 builder.Services.AddSingleton<RawDataService>();
 
+// ✅ Register MealCount WebSocket Background Service
+builder.Services.AddSingleton<MealCountWebSocketService>();
 
 // ✅ Add Controllers
 builder.Services.AddControllers();
@@ -145,6 +150,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.WebHost.UseKestrel()
     .UseUrls("http://0.0.0.0:5221");
 
+// ✅ Build App
 var app = builder.Build();
 
 // ✅ Enable Swagger
@@ -155,13 +161,38 @@ app.UseSwaggerUI(c =>
     c.RoutePrefix = string.Empty;
 });
 
+// ✅ Enable WebSockets
+var webSocketOptions = new WebSocketOptions
+{
+    KeepAliveInterval = TimeSpan.FromSeconds(120),
+};
+app.UseWebSockets(webSocketOptions);
+
+// ✅ WebSocket Endpoint for Meal Count Updates
+app.Map("/ws/mealcount", async context =>
+{
+    if (context.WebSockets.IsWebSocketRequest)
+    {
+        WebSocket webSocket = await context.WebSockets.AcceptWebSocketAsync();
+        var webSocketHandler = context.RequestServices.GetRequiredService<MealCountWebSocketService>();
+        await webSocketHandler.HandleWebSocketAsync(webSocket);
+    }
+    else
+    {
+        context.Response.StatusCode = 400;
+    }
+});
+
 // ✅ Middleware Setup
 app.UseCors("AllowAnyOrigin");
-//app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 
 // ✅ Map Controllers
 app.MapControllers();
+// ✅ Start WebSocket background change stream listener
+var mealSocketService = app.Services.GetRequiredService<MealCountWebSocketService>();
+_ = mealSocketService.StartAsync(); // Fire-and-forget
 
+// ✅ Run App
 app.Run();
