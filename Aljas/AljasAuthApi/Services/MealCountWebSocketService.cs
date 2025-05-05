@@ -9,14 +9,14 @@ namespace AljasAuthApi.Services
 {
     public class MealCountWebSocketService
     {
-        private readonly IMongoCollection<RawData> _rawDataCollection;
+        private readonly IMongoCollection<Rawdata> _rawDataCollection;
         private readonly DashboardService _dashboardService;
         private readonly List<WebSocket> _clients = new();
         private readonly object _lock = new();
 
         public MealCountWebSocketService(IMongoDatabase database, DashboardService dashboardService)
         {
-            _rawDataCollection = database.GetCollection<RawData>("rawdata");
+            _rawDataCollection = database.GetCollection<Rawdata>("rawdata");
             _dashboardService = dashboardService;
         }
 
@@ -24,7 +24,7 @@ namespace AljasAuthApi.Services
 {
     Console.WriteLine("🔁 Listening to rawdata changes...");
 
-    var pipeline = new EmptyPipelineDefinition<ChangeStreamDocument<RawData>>()
+    var pipeline = new EmptyPipelineDefinition<ChangeStreamDocument<Rawdata>>()
         .Match(change => change.OperationType == ChangeStreamOperationType.Insert);
 
     var options = new ChangeStreamOptions { FullDocument = ChangeStreamFullDocumentOption.UpdateLookup };

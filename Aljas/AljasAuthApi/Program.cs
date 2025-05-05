@@ -103,9 +103,12 @@ builder.Services.AddSingleton<CouponService>();
 builder.Services.AddSingleton<RoleHierarchyService>();
 builder.Services.AddSingleton<DashboardService>();
 builder.Services.AddSingleton<RawDataService>();
+builder.Services.AddSingleton<ReportService>();
+builder.Services.AddSingleton<ConsolidatedReportService>();
 
 // ✅ Register MealCount WebSocket Background Service
 builder.Services.AddSingleton<MealCountWebSocketService>();
+
 
 // ✅ Add Controllers
 builder.Services.AddControllers();

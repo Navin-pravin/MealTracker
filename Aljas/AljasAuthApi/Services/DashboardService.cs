@@ -6,12 +6,13 @@ using AljasAuthApi.Models;
 using System.Linq;
 using ProjectHierarchyApi.Models;
 
+
 namespace AljasAuthApi.Services
 {
     public class DashboardService
     {
         private readonly IMongoCollection<RoleHierarchy> _roleHierarchy;
-        private readonly IMongoCollection<RawData> _rawData;
+        private readonly IMongoCollection<Rawdata> _rawData;
         private readonly IMongoCollection<Dashboard> _Dashboard;
         private readonly IMongoCollection<Device> _devices;
 
@@ -21,7 +22,7 @@ namespace AljasAuthApi.Services
             var database = client.GetDatabase(dbSettings.DatabaseName);
             _Dashboard = database.GetCollection<Dashboard>("dashboard");
             _roleHierarchy = database.GetCollection<RoleHierarchy>("RoleHierarchy");
-            _rawData = database.GetCollection<RawData>("rawdata");
+            _rawData = database.GetCollection<Rawdata>("rawdata");
             _devices = database.GetCollection<Device>("Devices");
         }
 

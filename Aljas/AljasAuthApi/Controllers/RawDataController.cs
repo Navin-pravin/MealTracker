@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using AljasAuthApi.Models;
+
 
 [ApiController]
 [Route("api/[controller]")]
@@ -17,7 +19,7 @@ public class RawDataController : ControllerBase
     // Insert Data Endpoint
     [HttpPost]
     [Route("insert")]
-    public async Task<IActionResult> InsertRawData([FromBody] RawData rawData)
+    public async Task<IActionResult> InsertRawData([FromBody] Rawdata rawData)
     {
         if (rawData == null)
         {
